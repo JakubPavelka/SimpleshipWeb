@@ -1,0 +1,15 @@
+{
+  "name": "simpleshipweb-1",
+  "version": "1.0.0",
+  "description": "Live sass compiler\r npm run sass-watch",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "sass --no-source-map --watch src/sass/style.scss public/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.3"
+  }
+}
