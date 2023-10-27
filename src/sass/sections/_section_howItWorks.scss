@@ -1,0 +1,171 @@
+// DESKTOP START *************************************************
+.section__howItWorks {
+  @media (max-width: 850px) {
+    display: none;
+  }
+
+  .bg {
+    background-color: #f5f5ff;
+    padding: 12rem 0;
+    max-width: 160rem;
+    margin: 0 auto;
+    border-radius: 3rem;
+
+    @media (max-width: 1100px) {
+      max-width: 120rem;
+    }
+
+    .container {
+      .img__container {
+        text-align: center;
+        img {
+          @media (max-width: 1100px) {
+            max-width: 80rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP END *************************************************
+
+// MOBILE START ************************************************
+
+.section__howItWorksMobile {
+  display: none;
+
+  @media (max-width: 850px) {
+    display: block;
+  }
+
+  .bg__mob {
+    background-color: #f5f5ff;
+    padding: 7rem 2rem;
+    border-bottom-left-radius: 11rem;
+    border-top-right-radius: 11rem;
+
+    @media (max-width: 450px) {
+      padding: 6rem 0rem;
+    }
+    .container {
+      h3 {
+        font-size: 2.4rem;
+        color: $darkBlue;
+        text-align: center;
+        margin-bottom: 3rem;
+        span {
+          position: relative;
+          z-index: 4;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1.2rem;
+            border-radius: 0.2rem;
+            background-color: #dedefc;
+            bottom: 4px;
+            left: 0;
+            z-index: -1;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.45rem;
+        color: $darkBlue;
+        text-align: center;
+        max-width: 45rem;
+        margin: 0 auto 3.5rem auto;
+      }
+
+      .kroky {
+        position: relative;
+        margin: 0 auto 0 auto;
+        left: 1rem;
+        max-width: 32rem;
+
+        @media (max-width: 700px) {
+          left: 2.5rem;
+        }
+
+        @media (max-width: 500px) {
+          max-width: 28rem;
+          margin-right: 2rem;
+          left: -1rem;
+        }
+        @media (max-width: 420px) {
+          max-width: 24rem;
+          margin-right: 1rem;
+          left: -1.5rem;
+        }
+        @media (max-width: 350px) {
+          max-width: 22rem;
+          margin-right: 1rem;
+          left: -0.5rem;
+        }
+
+        .line {
+          left: -6.1rem;
+          top: 0;
+          height: 41rem;
+
+          @media (max-width: 500px) {
+            height: 40rem;
+            top: 1rem;
+            left: -4.5rem;
+          }
+          @media (max-width: 420px) {
+            height: 43rem;
+          }
+          @media (max-width: 350px) {
+            height: 48rem;
+          }
+        }
+        .objednavka {
+          position: relative;
+        }
+
+        .zabaleni {
+          position: relative;
+        }
+
+        .vyzvednuti {
+          position: relative;
+        }
+
+        .dodani {
+          position: relative;
+          p {
+            a {
+              color: #3457ea;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        h3 {
+          @include h3__howItWorksMobile;
+          position: relative;
+        }
+        img {
+          @include square;
+          @media (max-width: 500px) {
+            left: -4.5rem;
+            top: -0.1rem;
+            width: 3rem;
+            height: auto;
+          }
+        }
+        p {
+          @include p__howItWorksMobile;
+        }
+        h2 {
+          @include p__h2;
+        }
+      }
+    }
+  }
+}
+
+// MOBILE END ************************************************

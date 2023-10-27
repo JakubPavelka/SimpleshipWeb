@@ -1,0 +1,2455 @@
+// HEADER START *********************************************************************
+
+header {
+  position: relative;
+  background-color: $darkBlue;
+  z-index: 500;
+  height: 691px;
+  margin-bottom: 32rem;
+
+  @media (max-width: 1450px) {
+    margin-bottom: 38rem;
+  }
+
+  @media (max-width: 1150px) {
+    margin-bottom: 68rem;
+  }
+
+  @media (max-width: 910px) {
+    margin-bottom: 128rem;
+  }
+
+  @media (max-width: 710px) {
+    margin-bottom: 126rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 128.5rem;
+  }
+
+  @media (max-width: 521px) {
+    margin-bottom: 130rem;
+  }
+
+  // .overlay {
+  //   display: none;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: transparent;
+  //   z-index: 3;
+  // }
+
+  // .overlay.active {
+  //   display: block;
+
+  //   z-index: 3;
+  // }
+}
+
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  position: relative;
+
+  // MOBILE MENU NAVBAR START ****************************************************
+
+  // .mobile__menu {
+  //   background-color: $darkBlue;
+  //   width: 100%;
+  //   height: 100vh;
+  //   position: absolute;
+  //   top: 10rem;
+  //   left: 0;
+  //   z-index: 100;
+  //   .mobile__menu--sluzby {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     gap: 1rem;
+
+  //     h3 {
+  //       font-size: 2.4rem;
+  //       color: #fff;
+  //     }
+  //     img {
+  //     }
+  //   }
+
+  //   .mobile__menu--kamzasilame--hidden {
+  //     text-align: center;
+  //     .flex {
+  //       display: flex;
+  //       justify-content: center;
+  //       gap: 1rem;
+  //       h3 {
+  //         color: $lightBlue;
+  //         font-weight: 400;
+  //       }
+  //       img {
+  //       }
+  //     }
+  //     a {
+  //       color: $lightBlue;
+  //       text-decoration: underline;
+  //       margin-right: 0.5rem;
+
+  //       &:last-child {
+  //         margin-right: 0;
+  //       }
+  //     }
+  //   }
+
+  //   .mobile__menu--cozasilame--hidden {
+  //     .flex {
+  //       h3 {
+  //       }
+  //       img {
+  //       }
+  //     }
+  //     a {
+  //     }
+  //   }
+
+  //   .mobile__menu--preprava--hidden {
+  //     .flex {
+  //       h3 {
+  //       }
+  //       img {
+  //       }
+  //     }
+  //     a {
+  //     }
+  //   }
+
+  //   .mobile__menu--dopravci--hidden {
+  //     .flex {
+  //       h3 {
+  //       }
+  //       img {
+  //       }
+  //     }
+  //     a {
+  //     }
+  //   }
+  // }
+
+  // MOBILE MENU NAVBAR END ****************************************************
+
+  .header__col--1 {
+    img {
+      @include md {
+        width: 16rem;
+        height: auto;
+      }
+
+      @include sm {
+        width: 15rem;
+        height: auto;
+      }
+    }
+  }
+
+  .header__col--2 {
+    @include lg {
+      display: none;
+    }
+    .col__2--links {
+      display: flex;
+      gap: 2rem;
+      color: #fff;
+      font-size: $base-font-size;
+      @include xl {
+        gap: 1rem;
+      }
+
+      .dropdown {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .arrow__down {
+          stroke: #fff;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+      .col__2--link.dot {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: $darkBlue;
+          bottom: -15px;
+          left: 48%;
+
+          transition: all 0.1s;
+        }
+
+        &:hover::after {
+          background-color: $lightBlue;
+        }
+      }
+    }
+  }
+
+  .header__col--3 {
+    position: relative;
+
+    // DROPDOWN EUR START ***************************************
+
+    .dropdown__eur {
+      display: none;
+      position: absolute;
+      left: 4.7rem;
+      top: 5rem;
+      background-color: #182754;
+      padding: 1rem 1.5rem;
+      border-radius: 0.8rem;
+      transition: all 0.2s;
+      color: #fff;
+      font-size: $base-font-size;
+      z-index: 10;
+
+      &:hover {
+        background-color: #1e3167;
+      }
+
+      @include xl {
+        left: 3.5rem;
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    .dropdown__eur.active {
+      display: block;
+    }
+
+    // DROPDOWN EUR END ***************************************
+    // DROPDOWN ENG START ***************************************
+
+    .dropdown__eng {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      position: absolute;
+      left: 11.3rem;
+      top: 5rem;
+      background-color: #182754;
+      padding: 1rem 1.5rem;
+      border-radius: 0.8rem;
+      transition: all 0.2s;
+      color: #fff;
+      font-size: $base-font-size;
+      z-index: 10;
+
+      &:hover {
+        background-color: #1e3167;
+      }
+
+      @include xl {
+        left: 10rem;
+        padding: 1rem 1.1rem;
+      }
+    }
+
+    .dropdown__eng.active {
+      display: flex;
+    }
+
+    // DROPDOWN ENG END ***************************************
+    // DROPDOWN MENU START ***************************************
+
+    .dropdown__menu {
+      display: none;
+      position: absolute;
+      top: 7rem;
+      left: -1.3rem;
+      background-color: $login;
+      padding: 2rem 2.5rem;
+      border-radius: 2rem;
+      height: 40rem;
+      z-index: 1000;
+
+      @include xl {
+        left: -4rem;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      .inputfield {
+        .input__mail {
+          position: relative;
+          padding: 1rem 3rem 1rem 4.7rem;
+          width: 28rem;
+          background-color: $login;
+          border: 2px solid $inputBorder;
+          border-radius: 0.5rem;
+          color: #fff;
+          margin-bottom: 1.5rem;
+
+          &::placeholder {
+            color: #fff;
+            font-style: inherit;
+            margin: auto 0;
+          }
+        }
+        .input__mail--icon {
+          img {
+            position: absolute;
+            top: 7.9rem;
+            left: 4.2rem;
+            width: 1.9rem;
+          }
+        }
+        .input__password {
+          position: relative;
+          padding: 1rem 3rem 1rem 4.7rem;
+          width: 28rem;
+          background-color: $login;
+          border: 2px solid $inputBorder;
+          border-radius: 0.5rem;
+          color: #fff;
+
+          &::placeholder {
+            color: #fff;
+            font-style: inherit;
+            margin: auto 0;
+          }
+        }
+        .input__password--icon {
+          img {
+            position: absolute;
+            top: 13.5rem;
+            left: 4.2rem;
+            width: 1.8rem;
+          }
+        }
+
+        .input__mail,
+        .input__password {
+          transition: all 0.3s;
+          &:focus {
+            outline: none !important;
+            border: 2px solid $inputBorder-light;
+          }
+        }
+      }
+
+      // LOGIN BUTTON START
+
+      .login__btn--m {
+        text-align: center;
+        position: relative;
+
+        .login__btn {
+          @include purpleButton;
+        }
+
+        img {
+          position: absolute;
+          top: 2.2rem;
+          bottom: 0;
+          right: -25.5rem;
+
+          @media (max-width: 750px) {
+            right: -22.5rem;
+          }
+        }
+      }
+
+      // LOGIN BUTTON END
+
+      // FORGOT PASSWORD START
+
+      .forgot__password {
+        color: $lightBlue;
+        font-size: 1.5rem;
+        text-decoration: underline;
+      }
+
+      // FORGOT PASSWORD END
+      // REGISTER START
+      .noaccount {
+        background-color: #1e3167;
+        position: absolute;
+        width: 100%;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        padding: 0 2rem;
+        left: 0;
+        bottom: -10.5rem;
+
+        h3 {
+          color: #fff;
+          font-size: 1.8rem;
+          margin-top: 2.5rem;
+        }
+        .noaccount__btn--m {
+          text-align: center;
+          position: relative;
+          .noaccount__btn {
+            @include purpleButton;
+          }
+          img {
+            position: absolute;
+            top: 2.2rem;
+            bottom: 0;
+            right: 2.6rem;
+          }
+        }
+      }
+      // REGISTER END
+    }
+
+    .dropdown__menu.active {
+      display: block;
+    }
+    // DROPDOWN MENU END ***************************************
+
+    .col__3--links {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      color: #fff;
+      font-size: $base-font-size;
+      @include xl {
+        gap: 1rem;
+      }
+      @include md {
+        gap: 0;
+      }
+
+      .czk {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        span {
+        }
+
+        .arrow__down {
+          stroke: #fff;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+
+      .flag {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .flag__header {
+        }
+
+        .arrow__down {
+          stroke: #fff;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid $lightBlue;
+        padding: 1rem 2.5rem;
+        border-radius: 1rem;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $lightBlue;
+        }
+
+        @include xl {
+          margin-left: 1rem;
+        }
+
+        .user__header {
+          margin-top: -0.5rem;
+        }
+
+        span {
+        }
+      }
+
+      .menu {
+        display: none;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid $lightBlue;
+        border-radius: 1rem;
+        padding: 1rem 2.5rem;
+        transition: 0.3s all;
+
+        @include lg {
+          display: flex;
+        }
+
+        @include md {
+          padding: 0.8rem 2rem;
+          font-size: 1.4rem;
+        }
+
+        @include sm {
+          padding: 0.6rem 1.6rem;
+          font-size: 1.3rem;
+        }
+
+        &:hover {
+          background-color: $lightBlue;
+        }
+
+        img {
+        }
+        span {
+        }
+      }
+
+      .menu.active {
+        background-color: $lightBlue;
+      }
+
+      .czk,
+      .flag,
+      .btn,
+      .cart {
+        @include lg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// HEADER END *********************************************************************
+// UNDERNAV TEXT START ************************************************************
+
+.undernav__text {
+  margin-top: 6rem;
+  color: #fff;
+  font-size: 2.5rem;
+
+  @include md {
+    text-align: center;
+  }
+
+  @media (max-width: 510px) {
+    margin-top: 4rem;
+  }
+
+  span {
+    position: relative;
+    z-index: 4;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1rem;
+      border-radius: 0.2rem;
+      background-color: $kamkolivAfter;
+      bottom: 5px;
+      left: 0;
+      z-index: -1;
+
+      transition: all 0.1s;
+    }
+  }
+}
+
+.undernav__text.active {
+  display: none;
+}
+
+// UNDERNAV TEXT END ************************************************************
+
+// DROPDOWN START ************************************************************
+
+.services__dropdown {
+  display: none;
+  position: absolute;
+  top: 12rem;
+  justify-content: center;
+  right: 0;
+  gap: 12rem;
+  z-index: 1000;
+  background-color: $darkBlue;
+  border: 1.5px dotted $lightBlue;
+  padding: 4rem 10rem;
+  border-radius: 4rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 140rem;
+
+  @media (max-width: 1450px) {
+    min-width: 110rem;
+    gap: 8rem;
+  }
+
+  @media (max-width: 1150px) {
+    min-width: 90rem;
+    gap: 4rem;
+  }
+
+  h3 {
+    font-size: 2.3rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    @media (max-width: 1150px) {
+      font-size: 2rem;
+    }
+  }
+  a {
+    font-size: 1.6rem;
+    color: $lightBlue;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @media (max-width: 1150px) {
+      font-size: 1.4rem;
+    }
+  }
+  .dropdown__col--1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown__col--2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown__col--3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown__col--4 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// ACTIVE DROPDOWN
+.services__dropdown.active {
+  display: flex;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.undernav__bg {
+  display: none;
+  position: absolute;
+  background-color: $darkBlue;
+  height: 59.1rem;
+  width: 100%;
+  top: 10rem;
+  left: 0;
+  z-index: 2;
+}
+
+.undernav__bg.active {
+  display: block;
+}
+
+//  MOBILE MENU  START ******************************************
+
+.mobile__menu {
+  position: absolute;
+  left: -100%;
+  top: 6rem;
+  margin-top: 5rem;
+  background-color: $darkBlue;
+  width: 100%;
+  height: 67%;
+  gap: 4rem;
+  z-index: 100;
+  transition: all 0.3s;
+  padding: 0 2rem;
+
+  @media (max-width: 680px) {
+    height: 51%;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 3.5rem;
+  }
+
+  .mobile__flex {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    @include md {
+      gap: 2rem;
+    }
+
+    .mobile__menu--col--1,
+    .mobile__menu--col--2,
+    .mobile__menu--col--3,
+    .mobile__menu--col--4 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 3rem;
+
+      @media (max-width: 680px) {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    a {
+      font-size: 1.3rem;
+      color: $lightBlue;
+      text-decoration: underline;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @media (max-width: 680px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.mobile__menu.active {
+  left: 0;
+}
+
+//  MOBILE MENU  END ******************************************
+
+// MOBILE CZK FLAG LOGIN START ********************************
+.header__flex--mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  position: relative;
+
+  @media (max-width: 680px) {
+    padding-top: 2rem;
+  }
+
+  .header__col--3--mobile {
+    margin: 0 auto;
+
+    .col__3--links--mobile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      color: #fff;
+      font-size: $base-font-size;
+      margin-right: 5rem;
+      transition: all 0.3s;
+
+      @media (max-width: 750px) {
+        gap: 1rem;
+      }
+
+      @media (max-width: 680px) {
+        gap: 0.7rem;
+      }
+
+      .czk--mobile {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        span {
+          font-size: 1.4rem;
+
+          @media (max-width: 750px) {
+            font-size: 1.2rem;
+          }
+        }
+
+        .arrow__down {
+          stroke: #fff;
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+      }
+
+      .flag--mobile {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        .flag__header {
+        }
+
+        .arrow__down {
+          stroke: #fff;
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+      }
+
+      .cart {
+        cursor: pointer;
+        img {
+          width: 2.5rem;
+          height: auto;
+        }
+      }
+
+      .btn--mobile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid $lightBlue;
+        padding: 0.8rem 2rem;
+        border-radius: 1rem;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $lightBlue;
+        }
+
+        @include xl {
+          margin-left: 1rem;
+        }
+
+        @media (max-width: 750px) {
+          padding: 0.5rem 1.5rem;
+        }
+
+        .user__header {
+          margin-top: -0.5rem;
+        }
+
+        span {
+        }
+      }
+
+      .btn--mobile.active {
+        background-color: $lightBlue;
+      }
+
+      .menu.active {
+        background-color: $lightBlue;
+      }
+    }
+    .col__3--links--mobile.active {
+      margin-right: 26rem;
+
+      @media (max-width: 750px) {
+        margin-right: 31rem;
+      }
+
+      @media (max-width: 680px) {
+        margin-right: 36rem;
+      }
+    }
+    .dropdown__eur--mobile {
+      display: none;
+      position: absolute;
+      left: 3.7rem;
+      top: 5rem;
+      background-color: #182754;
+      padding: 1rem 1.2rem;
+      border-radius: 0.8rem;
+      transition: all 0.2s;
+      color: #fff;
+      font-size: $base-font-size;
+      z-index: 10;
+
+      &:hover {
+        background-color: #1e3167;
+      }
+
+      @media (max-width: 680px) {
+        top: 4rem;
+      }
+
+      @media (max-width: 750px) {
+        font-size: 1.2rem;
+        left: 2.4rem;
+      }
+    }
+    .dropdown__eur--mobile.active {
+      display: block;
+    }
+    .dropdown__eng--mobile {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      position: absolute;
+      left: 10rem;
+      top: 5rem;
+      background-color: #182754;
+      padding: 1rem 1.2rem;
+      border-radius: 0.8rem;
+      transition: all 0.2s;
+      color: #fff;
+      font-size: $base-font-size;
+      z-index: 10;
+
+      &:hover {
+        background-color: #1e3167;
+      }
+
+      @media (max-width: 680px) {
+        top: 4rem;
+      }
+
+      @media (max-width: 750px) {
+        font-size: 1.2rem;
+        left: 7.6rem;
+      }
+    }
+    .dropdown__eng--mobile.active {
+      display: flex;
+    }
+  }
+  // LOGIN MOBILE START *******************************
+
+  .dropdown__menu--mobile {
+    display: none;
+    position: absolute;
+    top: -35.5rem;
+    left: 31rem;
+    background-color: $login;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    height: 29.5rem;
+    z-index: 1000;
+
+    @media (max-width: 680px) {
+      left: 28rem;
+      height: 25rem;
+      top: -26.5rem;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 680px) {
+        font-size: 1.2rem;
+      }
+    }
+    .inputfield {
+      .input__mail {
+        position: relative;
+        padding: 1rem 3rem 1rem 4.7rem;
+        width: 28rem;
+        background-color: $login;
+        border: 2px solid $inputBorder;
+        border-radius: 0.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+
+        &::placeholder {
+          color: #fff;
+          font-style: inherit;
+          margin: auto 0;
+        }
+      }
+      .input__mail--icon {
+        img {
+          position: absolute;
+          top: 6.1rem;
+          left: 3.7rem;
+          width: 1.9rem;
+
+          @media (max-width: 680px) {
+            top: 5.1rem;
+            width: 1.7rem;
+          }
+        }
+      }
+      .input__password {
+        position: relative;
+        padding: 1rem 3rem 1rem 4.7rem;
+        width: 28rem;
+
+        background-color: $login;
+        border: 2px solid $inputBorder;
+        border-radius: 0.5rem;
+        color: #fff;
+
+        &::placeholder {
+          color: #fff;
+          font-style: inherit;
+          margin: auto 0;
+        }
+      }
+      .input__password--icon {
+        img {
+          position: absolute;
+          top: 11.1rem;
+          left: 3.7rem;
+          width: 1.8rem;
+
+          @media (max-width: 680px) {
+            top: 9rem;
+            width: 1.6rem;
+          }
+        }
+      }
+
+      .input__mail,
+      .input__password {
+        transition: 0.3s all;
+        &:focus {
+          outline: none !important;
+          border: 2px solid $inputBorder-light;
+        }
+
+        @media (max-width: 750px) {
+          width: 24rem;
+          padding-right: 0.2rem;
+        }
+
+        @media (max-width: 680px) {
+          width: 20rem;
+          font-size: 1.2rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+
+    // LOGIN BUTTON START
+
+    .login__btn--m {
+      text-align: center;
+      position: relative;
+
+      .login__btn {
+        @include purpleButton;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+
+        @media (max-width: 680px) {
+          margin-bottom: 0.6rem;
+          font-size: 1.2rem;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 1.6rem;
+        bottom: 0;
+        right: -25.5rem;
+
+        @media (max-width: 750px) {
+          right: -22.5rem;
+        }
+
+        @media (max-width: 680px) {
+          right: -19rem;
+          top: 1.3rem;
+        }
+      }
+    }
+
+    // LOGIN BUTTON END
+
+    // FORGOT PASSWORD START
+
+    .forgot__password {
+      color: $lightBlue;
+      font-size: 1.4rem;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @media (max-width: 680px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    // FORGOT PASSWORD END
+    // REGISTER START
+    .noaccount {
+      background-color: #1e3167;
+      position: absolute;
+      width: 100%;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      padding: 0 2rem;
+      left: 0;
+      bottom: -10rem;
+
+      @media (max-width: 680px) {
+        bottom: -5.5rem;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+
+        @media (max-width: 680px) {
+          font-size: 1.2rem;
+          margin-top: 1rem;
+        }
+      }
+      .noaccount__btn--m {
+        text-align: center;
+        position: relative;
+        .noaccount__btn {
+          @include purpleButton;
+          padding: 1rem 0;
+          font-size: 1.5rem;
+
+          @media (max-width: 680px) {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+          }
+        }
+        img {
+          position: absolute;
+          top: 1.6rem;
+          bottom: 0rem;
+          right: 2.6rem;
+
+          @media (max-width: 680px) {
+            right: 1.1rem;
+            bottom: 0;
+            top: 1.3rem;
+          }
+        }
+      }
+
+      // REGISTER END
+    }
+  }
+
+  .dropdown__menu--mobile.active {
+    display: block;
+  }
+
+  // LOGIN MOBILE END *********************************
+}
+
+// MOBILE CZK FLAG LOGIN START ********************************
+
+// MOBILE MENU 565PX START ************************************
+
+.mobile__menu--565 {
+  display: none;
+  .mobile__menu--sluzby--565 {
+    h3 {
+    }
+
+    img {
+    }
+  }
+  .mobile__menu--kamzasilame--hidden {
+    .flex {
+      h3 {
+      }
+
+      img {
+      }
+    }
+
+    a {
+    }
+  }
+
+  .mobile__menu--cozasilame--hidden {
+    .flex {
+      h3 {
+      }
+
+      img {
+      }
+    }
+
+    a {
+    }
+  }
+
+  .mobile__menu--preprava--hidden {
+    .flex {
+      h3 {
+      }
+
+      img {
+      }
+    }
+
+    a {
+    }
+  }
+
+  .mobile__menu--dopravci--hidden {
+    .flex {
+      h3 {
+      }
+
+      img {
+      }
+    }
+
+    a {
+    }
+  }
+}
+
+// MOBILE MENU 565PX START ************************************
+
+// FORM START ****************************************************************************
+.form {
+  position: relative;
+  background-color: #fff;
+  max-width: 170rem;
+  margin: 0 auto;
+  border-radius: 3rem;
+  margin-top: 5rem;
+  padding: 6.5rem 0;
+  box-shadow: 0px 4px 65px 0px rgba(14, 28, 76, 0.14);
+
+  @media (max-width: 910px) {
+    padding-bottom: 0;
+    border-bottom-left-radius: 11.4rem;
+    box-shadow: none;
+  }
+
+  // RIGHT COL 910PX VIEWPORT START *******************************
+
+  .right__col--910 {
+    background-color: #efefff;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 11.4rem;
+    padding-top: 5rem;
+    padding: 6.5rem 6rem;
+    height: 100%;
+
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4rem auto 0 auto;
+
+    @media (max-width: 1450px) {
+      padding: 6.5rem 4rem;
+    }
+
+    @media (max-width: 910px) {
+      display: flex;
+    }
+
+    @media (max-width: 600px) {
+      padding: 4rem 4rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: 2.5rem 2.5rem;
+    }
+
+    .col__container--910 {
+      text-align: center;
+      .img__container--910 {
+        display: grid;
+        place-items: center;
+      }
+      h3 {
+        color: $darkBlue;
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 400;
+        margin-top: 2rem;
+        line-height: 1.2;
+      }
+      span {
+        position: relative;
+        font-weight: 700;
+        color: $darkBlue;
+        text-align: center;
+        font-size: 2.3rem;
+        z-index: 0;
+        margin-bottom: 2rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1rem;
+          border-radius: 0.2rem;
+          background-color: #dedefc;
+          bottom: 4px;
+          left: 0;
+          z-index: -1;
+
+          transition: all 0.1s;
+        }
+      }
+      p {
+        margin-top: 2rem;
+        font-size: $base-font-size;
+        color: $darkBlue;
+        text-align: center;
+      }
+      .slider__btn {
+        @include purpleButton;
+        width: 35rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 450px) {
+          width: 20rem;
+        }
+      }
+      .arrows {
+        .arrow__left {
+        }
+        .arrow__right {
+        }
+      }
+    }
+    .arrows {
+      @include flexcenter;
+      gap: 2rem;
+      margin-bottom: 0.3rem;
+      .arrow__left {
+        @include sliderArrows;
+        .fa-chevron-left {
+          font-size: 1.6rem;
+        }
+      }
+      .arrow__right {
+        @include sliderArrows;
+
+        .fa-chevron-right {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  // RIGHT COL 910PX VIEWPORT END *******************************
+
+  .container {
+    .col__left {
+      max-width: 90rem;
+      @media (max-width: 1450px) {
+        overflow-x: hidden;
+      }
+
+      .row__1 {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          background-color: #e9e9ff;
+          bottom: -1.8rem;
+          left: 0;
+          border-radius: 1rem;
+        }
+
+        .col1 {
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: #375cf6;
+            bottom: -1.8rem;
+            left: 0rem;
+            border-radius: 1rem;
+            z-index: 1;
+          }
+        }
+
+        .col1,
+        .col2,
+        .col3,
+        .col4,
+        .col5,
+        .col6 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          img {
+            width: 3rem;
+          }
+          p {
+            font-size: $base-font-size;
+            color: $darkBlue;
+
+            @media (max-width: 910px) {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+
+      .form__main {
+        .flex__form {
+          position: relative;
+          display: flex;
+          max-width: 90rem;
+          gap: 10rem;
+
+          @media (max-width: 1450px) {
+            gap: 5rem;
+          }
+          @media (max-width: 1150px) {
+            flex-direction: column;
+          }
+
+          @media (max-width: 910px) {
+            align-items: center;
+            gap: 1rem;
+          }
+
+          .reverse {
+            position: absolute;
+            top: 12.4rem;
+            left: 44.1rem;
+
+            @media (max-width: 1450px) {
+              left: 35.7rem;
+            }
+
+            @media (max-width: 1150px) {
+              top: 24.9rem;
+              left: 22rem;
+            }
+
+            @media (max-width: 910px) {
+              display: none;
+            }
+          }
+          .form__main--col--1 {
+            h3 {
+              margin-top: 6rem;
+              margin-bottom: 1.5rem;
+              font-size: $base-font-size;
+
+              @media (max-width: 1450px) {
+                padding-left: 2rem;
+              }
+
+              @media (max-width: 1150px) {
+                margin-top: 4rem;
+                padding-left: 1.2rem;
+              }
+              @media (max-width: 450px) {
+                padding-left: 0;
+              }
+            }
+            .form__main--input--left {
+              @media (max-width: 1450px) {
+                padding-left: 2rem;
+              }
+              @media (max-width: 1150px) {
+                padding-left: 1.2rem;
+              }
+              @media (max-width: 450px) {
+                padding-left: 0;
+              }
+              select {
+                @include selectInput;
+
+                @media (max-width: 1450px) {
+                  width: 32rem;
+                }
+
+                @media (max-width: 1150px) {
+                  width: 45rem;
+                }
+
+                @media (max-width: 600px) {
+                  display: block;
+                  width: 37rem;
+                }
+
+                @media (max-width: 450px) {
+                  width: 27rem;
+                  padding: 1.7rem 0rem 1.7rem 3.6rem;
+
+                  &::placeholder {
+                    font-size: 1.4rem;
+                  }
+                }
+
+                option {
+                  width: 27rem;
+                }
+              }
+              .city__postal--flex {
+                position: relative;
+                display: flex;
+                gap: 1rem;
+
+                @media (max-width: 910px) {
+                  margin-bottom: 3.5rem;
+                }
+
+                @media (max-width: 600px) {
+                  flex-direction: column;
+                }
+
+                @media (max-width: 450px) {
+                  margin-bottom: 2.2rem;
+                }
+
+                .city {
+                  width: 25rem;
+                  @include input;
+
+                  @media (max-width: 1450px) {
+                    width: 18rem;
+                  }
+                  @media (max-width: 1150px) {
+                    width: 25rem;
+                  }
+                  @media (max-width: 600px) {
+                    width: 100%;
+                  }
+
+                  @media (max-width: 450px) {
+                    width: 100%;
+                    padding: 1.7rem 0rem 1.7rem 4rem;
+                    font-size: 1.4rem;
+
+                    &::placeholder {
+                      font-size: 1.4rem;
+                    }
+                  }
+                }
+                .postal {
+                  width: 14rem;
+                  @include input;
+
+                  @media (max-width: 1450px) {
+                    width: 13rem;
+                  }
+                  @media (max-width: 1150px) {
+                    width: 19rem;
+                  }
+                  @media (max-width: 600px) {
+                    width: 100%;
+                  }
+
+                  @media (max-width: 450px) {
+                    width: 100%;
+                    padding: 1.7rem 0rem 1.7rem 4rem;
+                    font-size: 1.4rem;
+
+                    &::placeholder {
+                      font-size: 1.4rem;
+                    }
+                  }
+                }
+                .city__img {
+                  position: absolute;
+                  left: 1.5rem;
+                  top: 1.7rem;
+                  width: 2.4rem;
+                  height: 2.4rem;
+
+                  @media (max-width: 450px) {
+                    left: 1rem;
+                  }
+                }
+                .postal__img {
+                  position: absolute;
+                  top: 1.7rem;
+                  right: 10rem;
+                  width: 2.4rem;
+                  height: 2.4rem;
+
+                  @media (max-width: 1450px) {
+                    right: 9.2rem;
+                  }
+
+                  @media (max-width: 1150px) {
+                    left: 27.5rem;
+                  }
+                  @media (max-width: 600px) {
+                    left: 1.3rem;
+                    top: 8.6rem;
+                  }
+
+                  @media (max-width: 450px) {
+                    left: 0.9rem;
+                  }
+                }
+              }
+            }
+          }
+
+          // REVERSE 910 VIEWPORT START
+
+          .form__main--col--reverse {
+            display: none;
+            @media (max-width: 910px) {
+              display: block;
+            }
+            .reverse__2 {
+              img {
+              }
+            }
+          }
+
+          // REVERSE 910 VIEWPORT END
+
+          .form__main--col--2 {
+            @media (max-width: 1150px) {
+              padding-left: 1.2rem;
+            }
+            @media (max-width: 450px) {
+              padding-left: 0;
+            }
+            h3 {
+              margin-top: 6rem;
+              margin-bottom: 1.5rem;
+              font-size: $base-font-size;
+
+              @media (max-width: 1150px) {
+                margin-top: 0rem;
+              }
+            }
+            .form__main--input--right {
+              select {
+                @include selectInput;
+
+                @media (max-width: 1450px) {
+                  width: 32rem;
+                }
+
+                @media (max-width: 1150px) {
+                  width: 45rem;
+                }
+
+                @media (max-width: 600px) {
+                  display: block;
+                  width: 37rem;
+                }
+                @media (max-width: 450px) {
+                  width: 27rem;
+                  padding: 1.7rem 0rem 1.7rem 3.6rem;
+
+                  &::placeholder {
+                    font-size: 1.4rem;
+                  }
+                }
+
+                option {
+                  width: 100%;
+                }
+              }
+              .city__postal--flex {
+                position: relative;
+                display: flex;
+                gap: 1rem;
+                @media (max-width: 600px) {
+                  flex-direction: column;
+                }
+                .city {
+                  width: 25rem;
+                  @include input;
+
+                  @media (max-width: 1450px) {
+                    width: 18rem;
+                  }
+
+                  @media (max-width: 1150px) {
+                    width: 25rem;
+                  }
+                  @media (max-width: 600px) {
+                    width: 100%;
+                  }
+                  @media (max-width: 450px) {
+                    width: 100%;
+                    padding: 1.7rem 0rem 1.7rem 4rem;
+                    font-size: 1.4rem;
+
+                    &::placeholder {
+                      font-size: 1.4rem;
+                    }
+                  }
+                }
+                .postal {
+                  width: 14rem;
+                  @include input;
+
+                  @media (max-width: 1450px) {
+                    width: 13rem;
+                  }
+
+                  @media (max-width: 1150px) {
+                    width: 19rem;
+                  }
+                  @media (max-width: 600px) {
+                    width: 100%;
+                  }
+                  @media (max-width: 450px) {
+                    width: 100%;
+                    padding: 1.7rem 0rem 1.7rem 4rem;
+                    font-size: 1.4rem;
+
+                    &::placeholder {
+                      font-size: 1.4rem;
+                    }
+                  }
+                }
+                .city__img {
+                  position: absolute;
+                  left: 1.5rem;
+                  top: 1.7rem;
+                  width: 2.4rem;
+                  height: 2.4rem;
+
+                  @media (max-width: 450px) {
+                    left: 1rem;
+                  }
+                }
+                .postal__img {
+                  position: absolute;
+                  top: 1.7rem;
+                  right: 10rem;
+                  width: 2.4rem;
+                  height: 2.4rem;
+
+                  @media (max-width: 1450px) {
+                    right: 9.2rem;
+                  }
+                  @media (max-width: 1150px) {
+                    left: 27.5rem;
+                  }
+                  @media (max-width: 600px) {
+                    left: 1.3rem;
+                    top: 8.6rem;
+                  }
+                  @media (max-width: 450px) {
+                    left: 0.9rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // PACKAGE SECTION START ******************************************************
+        .package {
+          @media (max-width: 1450px) {
+            display: none;
+          }
+          h3 {
+            font-size: 1.6rem;
+            margin-top: 5rem;
+            margin-bottom: 1.5rem;
+          }
+          .package__flex {
+            position: relative;
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0px 9px 32px 0px #efefff;
+            border-radius: 1.2rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 7rem;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 1.5px;
+              height: 100%;
+
+              background-color: #f0f0ff;
+              bottom: 0;
+              left: 60rem;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 1.5px;
+              height: 100%;
+
+              background-color: #f0f0ff;
+              bottom: 0;
+              left: 19.2rem;
+            }
+            .hmotnost {
+              @include input;
+              width: 13rem;
+              padding: 1.7rem 2rem;
+            }
+            .kg {
+              margin: auto 0;
+              font-size: 1.5rem;
+              margin-left: 1.3rem;
+              margin-right: 1.3rem;
+            }
+            .delka {
+              @include input;
+              width: 9rem;
+              margin-left: 2rem;
+              margin-right: 1.3rem;
+              padding: 1.7rem 2rem;
+            }
+            .x__1 {
+              margin: auto 0;
+              font-size: 1.3rem;
+            }
+            .sirka {
+              @include input;
+              width: 9rem;
+              margin-left: 1.3rem;
+              margin-right: 1.3rem;
+              padding: 1.7rem 2rem;
+            }
+            .x__2 {
+              margin: auto 0;
+              font-size: 1.3rem;
+            }
+            .vyska {
+              @include input;
+              width: 9rem;
+              margin-left: 1.3rem;
+              margin-right: 1.3rem;
+              padding: 1.7rem 2rem;
+            }
+            .cm {
+              margin: auto 0;
+              font-size: 1.5rem;
+            }
+
+            .copy__flex {
+              @include flexcenter;
+              margin-left: 3.5rem;
+
+              .copy {
+                @include flexcenter;
+                gap: 0.8rem;
+                img {
+                }
+                p {
+                  @include new__copy--p;
+                }
+              }
+            }
+            .new__flex {
+              @include flexcenter;
+              .new {
+                margin-left: 2.5rem;
+                @include flexcenter;
+                gap: 0.8rem;
+                img {
+                }
+                p {
+                  @include new__copy--p;
+                }
+              }
+            }
+          }
+        }
+
+        // PACKAGE SECTION END ******************************************************
+        // PACKAGE SECTION 1450 VIEWPORT START **************************************
+        .package.viewport__1450 {
+          display: none;
+          @media (max-width: 1450px) {
+            display: block;
+          }
+          @media (max-width: 1150px) {
+            display: none;
+          }
+          h3 {
+            font-size: 1.6rem;
+            margin-top: 5rem;
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+          }
+          .viewport__1450--border {
+            background-color: #fff;
+            box-shadow: 0px 9px 32px 0px #efefff;
+            width: 70.82rem;
+            border-radius: 1.2rem;
+
+            .package__flex {
+              position: relative;
+              display: flex;
+              box-shadow: none;
+              justify-content: space-between;
+              background-color: transparent;
+              border-radius: 1.2rem;
+              padding: 1.5rem 2rem;
+              margin-bottom: 0;
+              max-width: 68.82rem;
+
+              &::after {
+                content: none;
+              }
+
+              &::before {
+                content: none;
+                position: absolute;
+                width: 1.5px;
+                height: 100%;
+
+                background-color: #f0f0ff;
+                bottom: 0;
+                left: 21.1rem;
+              }
+              .hmotnost {
+                @include input;
+                width: 13rem;
+                padding: 1.7rem 2rem;
+              }
+              .kg {
+                margin: auto 0;
+                font-size: 1.5rem;
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+              }
+              .delka {
+                @include input;
+                width: 9rem;
+                margin-left: 2rem;
+                margin-right: 1.3rem;
+                padding: 1.7rem 2rem;
+              }
+              .x__1 {
+                margin: auto 0;
+                font-size: 1.3rem;
+              }
+              .sirka {
+                @include input;
+                width: 9rem;
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+                padding: 1.7rem 2rem;
+              }
+              .x__2 {
+                margin: auto 0;
+                font-size: 1.3rem;
+              }
+              .vyska {
+                @include input;
+                width: 9rem;
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+                padding: 1.7rem 2rem;
+              }
+              .cm {
+                margin: auto 0;
+                font-size: 1.5rem;
+              }
+            }
+
+            .package__flex--2 {
+              display: flex;
+
+              padding: 2.7rem 2rem 1.5rem 2rem;
+              border-radius: 1.2rem;
+              gap: 2rem;
+              text-align: center;
+              max-width: 35.3rem;
+              align-items: center;
+
+              .copy__flex {
+                @include flexcenter;
+
+                .copy {
+                  @include flexcenter;
+                  justify-content: flex-start;
+                  gap: 0.8rem;
+                  img {
+                  }
+                  p {
+                    @include new__copy--p;
+                  }
+                }
+              }
+              .new__flex {
+                @include flexcenter;
+                .new {
+                  @include flexcenter;
+                  gap: 0.8rem;
+                  img {
+                  }
+                  p {
+                    @include new__copy--p;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // PACKAGE SECTION 1300 VIEWPORT END **************************************
+        // PACKAGE SECTION 1150 VIEWPORT START **************************************
+        .package.viewport__1150 {
+          display: none;
+          @media (max-width: 1150px) {
+            display: block;
+          }
+
+          h3 {
+            font-size: 1.6rem;
+            margin-top: 5rem;
+            margin-bottom: 1.5rem;
+
+            @media (max-width: 1150px) {
+              padding-left: 1.2rem;
+            }
+
+            @media (max-width: 910px) {
+              display: grid;
+              text-align: center;
+              padding-right: 38.8rem;
+            }
+
+            @media (max-width: 600px) {
+              padding-right: 31.2rem;
+            }
+
+            @media (max-width: 450px) {
+              margin-top: 3.5rem;
+              padding-right: 22rem;
+            }
+          }
+          .viewport__1150--border {
+            background-color: #fff;
+            box-shadow: 0px 9px 32px 0px #efefff;
+            border-radius: 1.2rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            max-width: 46.1rem;
+
+            @media (max-width: 1150px) {
+              padding-left: 2.5rem;
+            }
+
+            @media (max-width: 910px) {
+              margin: 0 auto;
+            }
+
+            @media (max-width: 600px) {
+              width: 38rem;
+              padding-left: 2rem;
+            }
+
+            @media (max-width: 450px) {
+              width: 31rem;
+              padding-right: 0;
+              padding-left: 2.4rem;
+            }
+
+            @media (max-width: 350px) {
+              width: 31rem;
+
+              padding-left: 1.5rem;
+            }
+
+            .package__flex {
+              position: relative;
+              display: flex;
+              background-color: transparent;
+              box-shadow: none;
+              border-radius: 1.2rem;
+              padding: 1.5rem 0 1.5rem 0;
+              margin-bottom: 1rem;
+              max-width: 45rem;
+              gap: 0.7rem;
+
+              @media (max-width: 1150px) {
+                padding-left: 0;
+              }
+
+              @media (max-width: 600px) {
+                margin-bottom: 0;
+              }
+
+              @media (max-width: 450px) {
+                padding-left: 0;
+                gap: 1.5rem;
+              }
+
+              &::after {
+                content: none;
+              }
+
+              &::before {
+                content: none;
+              }
+              .hmotnost {
+                @include input;
+                width: 37.4rem;
+                padding: 1.7rem 2rem;
+
+                @media (max-width: 450px) {
+                  width: 22.2rem;
+                  font-size: 1.2rem;
+                }
+              }
+              .kg {
+                margin: auto 0;
+                font-size: 1.5rem;
+                margin-left: 1.3rem;
+
+                @media (max-width: 450px) {
+                  margin-left: 0;
+                  font-size: 1.2rem;
+                }
+                @media (max-width: 350px) {
+                  margin-right: 1.5rem;
+                }
+              }
+            }
+            .package__flex--2 {
+              position: relative;
+              display: flex;
+              // background-color: #fff;
+              // box-shadow: 0px 9px 32px 0px #efefff;
+              justify-content: space-evenly;
+              border-radius: 1.2rem;
+              padding: 1.5rem 0 1.5rem 0;
+              margin-bottom: 1rem;
+              max-width: 50rem;
+              gap: 1rem;
+              @media (max-width: 1150px) {
+                padding-left: 0;
+              }
+              @media (max-width: 450px) {
+                width: 24.8rem;
+                gap: 0.5rem;
+                justify-content: flex-start;
+                align-items: center;
+              }
+              @media (max-width: 600px) {
+                margin-bottom: 0;
+                padding-bottom: 1rem;
+              }
+
+              .delka {
+                position: relative;
+                @include input;
+                width: 9rem;
+                padding: 1.7rem 2rem;
+
+                @media (max-width: 450px) {
+                  width: 7rem;
+
+                  font-size: 1.2rem;
+                  padding-right: 0.5rem;
+                  padding-left: 1.9rem;
+                  padding-top: 1.8rem;
+                }
+              }
+              .x__1 {
+                margin: auto auto;
+                font-size: 1.3rem;
+                @media (max-width: 600px) {
+                  display: none;
+                }
+
+                // @media (max-width: 450px) {
+                //   position: absolute;
+                //   top: 3.4rem;
+                //   left: 17.25rem;
+                //   font-size: 1.1rem;
+                // }
+              }
+              .sirka {
+                @include input;
+                width: 9rem;
+
+                padding: 1.7rem 2rem;
+                @media (max-width: 450px) {
+                  width: 7rem;
+                  font-size: 1.2rem;
+                  padding-left: 2rem;
+                  padding-top: 1.8rem;
+                  padding-right: 0.5rem;
+                }
+              }
+              .x__2 {
+                margin: auto auto;
+                font-size: 1.3rem;
+                @media (max-width: 600px) {
+                  display: none;
+                }
+
+                // @media (max-width: 450px) {
+                //   position: absolute;
+                //   top: 3.4rem;
+                //   left: 8.25rem;
+                //   font-size: 1.1rem;
+                // }
+              }
+              .vyska {
+                @include input;
+                width: 9rem;
+
+                padding: 1.7rem 2rem;
+
+                @media (max-width: 450px) {
+                  width: 7rem;
+                  font-size: 1.2rem;
+                  padding-left: 1.7rem;
+                  padding-top: 1.8rem;
+                  padding-right: 0.5rem;
+                }
+              }
+              .cm {
+                margin: auto auto;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                @media (max-width: 600px) {
+                  margin-left: 0.5rem;
+                  margin-right: 0;
+                }
+
+                @media (max-width: 450px) {
+                  display: none;
+                }
+              }
+
+              // MOBILE VIEWPORT CM
+
+              .cm__1 {
+                display: none;
+                position: absolute;
+                font-size: 1.2rem;
+                @media (max-width: 450px) {
+                  display: block;
+                  left: 23.4rem;
+                }
+              }
+
+              // MOBILE VIEWPORT CM
+            }
+
+            .package__flex--3 {
+              display: flex;
+              // background-color: #fff;
+              // box-shadow: 0px 9px 32px 0px #efefff;
+              gap: 3rem;
+              padding: 1.5rem 2rem 1.5rem 0;
+              border-radius: 1.2rem;
+              text-align: center;
+              max-width: 35.3rem;
+
+              @media (max-width: 450px) {
+                padding-left: 0rem;
+                padding-right: 0;
+                gap: 1.2rem;
+              }
+
+              @media (max-width: 350px) {
+                padding-left: 0.5rem;
+              }
+
+              .copy {
+                @include flexcenter;
+                justify-content: flex-start;
+                gap: 0.8rem;
+                img {
+                }
+                p {
+                  @include new__copy--p;
+
+                  @media (max-width: 450px) {
+                    font-size: 1.5rem;
+                  }
+                }
+              }
+
+              .new {
+                @include flexcenter;
+                gap: 0.8rem;
+                img {
+                }
+                p {
+                  @include new__copy--p;
+
+                  @media (max-width: 450px) {
+                    font-size: 1.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // PACKAGE SECTION 1150 VIEWPORT END **************************************
+
+        // PRICE COUNT BUTTON START ***************************************************
+        .price__count--btn {
+          position: relative;
+          @include purpleButton;
+          margin-bottom: 0;
+
+          img {
+            position: absolute;
+            top: 2.2rem;
+            right: 2.5rem;
+          }
+
+          @media (max-width: 1450px) {
+            margin-top: 4rem;
+            max-width: 70.82rem;
+          }
+
+          @media (max-width: 1150px) {
+            width: 46.1rem;
+          }
+
+          @media (max-width: 910px) {
+            margin: 0 auto;
+            margin-top: 4rem;
+          }
+
+          @media (max-width: 600px) {
+            width: 37rem;
+          }
+
+          @media (max-width: 450px) {
+            max-width: 24rem;
+          }
+        }
+        // PRICE COUNT BUTTON END ***************************************************
+      }
+    }
+    // RIGHT SIDE SLIDER START **************************************************
+  }
+  .col__right {
+    background-color: #efefff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 11.4rem;
+    padding-top: 5rem;
+    padding: 6.5rem 6rem;
+    height: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 1450px) {
+      padding: 6.5rem 4rem;
+      max-width: 35rem;
+    }
+
+    @media (max-width: 910px) {
+      display: none;
+    }
+
+    .col__container {
+      .img__container {
+        display: grid;
+        place-items: center;
+      }
+      h3 {
+        color: $darkBlue;
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 400;
+        margin-top: 2rem;
+        line-height: 1.2;
+      }
+      span {
+        position: relative;
+        font-weight: 700;
+        color: $darkBlue;
+        text-align: center;
+        font-size: 2.3rem;
+        z-index: 0;
+        margin-bottom: 2rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1rem;
+          border-radius: 0.2rem;
+          background-color: #dedefc;
+          bottom: 4px;
+          left: 0;
+          z-index: -1;
+
+          transition: all 0.1s;
+        }
+      }
+      p {
+        margin-top: 2rem;
+        font-size: $base-font-size;
+        color: $darkBlue;
+        text-align: center;
+      }
+      .slider__btn {
+        @include purpleButton;
+      }
+      .arrows {
+        .arrow__left {
+        }
+        .arrow__right {
+        }
+      }
+    }
+    .arrows {
+      @include flexcenter;
+      gap: 2rem;
+      margin-bottom: 0.3rem;
+      .arrow__left {
+        @include sliderArrows;
+        .fa-chevron-left {
+          font-size: 1.6rem;
+        }
+      }
+      .arrow__right {
+        @include sliderArrows;
+
+        .fa-chevron-right {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+// RIGHT SIDE SLIDER END **************************************************
