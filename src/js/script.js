@@ -128,7 +128,7 @@ document.querySelector(".col__3--link.menu").addEventListener("click", () => {
 
 // MENU ACTIVATE EVENTLISTENER START
 
-document.querySelector(".col__3--link.menu").addEventListener("click", () => {
+document.querySelector(".col__3--link.menu").addEventListener("click", (xx) => {
   document.querySelector(".mobile__menu").classList.toggle("active");
 
   if (document.querySelector(".dropdown__eur--mobile.active")) {
@@ -199,4 +199,98 @@ document.querySelector(".btn--mobile").addEventListener("click", () => {
   }
 });
 
-// MENU MOBILE ACCOUNT CZK FLAG REMOVE START
+// MENU MOBILE ACCOUNT CZK FLAG REMOVE END
+
+// SLUZBY SUBCLASSES OPENER START
+
+document
+  .querySelector(".mobile__menu--sluzby--565")
+  .addEventListener("click", () => {
+    document
+      .querySelector(".mobile__menu--kamzasilame--hidden")
+      .classList.toggle("active");
+    document
+      .querySelector(".mobile__menu--cozasilame--hidden")
+      .classList.toggle("active");
+    document
+      .querySelector(".mobile__menu--preprava--hidden")
+      .classList.toggle("active");
+    document
+      .querySelector(".mobile__menu--dopravci--hidden")
+      .classList.toggle("active");
+  });
+
+// SLUZBY SUBCLASSES OPENER END
+
+// SUBCLASSES OPENER START
+
+const chevronUp = document.querySelectorAll(".flex-mob");
+
+for (let z = 0; z < chevronUp.length; z++) {
+  chevronUp[z].addEventListener("click", () => {
+    for (let y = 0; y < chevronUp.length; y++) {
+      if (y === z) {
+        continue;
+      }
+
+      document
+        .querySelector(".a__container--" + (y + 1))
+        .classList.remove("active");
+    }
+
+    document
+      .querySelector(".a__container--" + (z + 1))
+      .classList.toggle("active");
+  });
+}
+
+// SUBCLASSES OPENER END
+
+// MOBILE MENU 565 PX CZK CZ FLAG ACCOUNT START
+
+// MOBILE MENU OVERFLOW HIDDEN 565 PX START
+
+// MOBILE MENU OVERFLOW HIDDEN 565 PX END
+
+document.querySelector(".czk--mobile--565").addEventListener("click", () => {
+  document
+    .querySelector(".dropdown__eur--mobile--565")
+    .classList.toggle("active");
+});
+document.querySelector(".flag--mobile--565").addEventListener("click", () => {
+  document
+    .querySelector(".dropdown__eng--mobile--565")
+    .classList.toggle("active");
+});
+
+// MOBILE MENU 565 PX CZK CZ FLAG ACCOUNT END
+
+// MOBILE MENU 565 PX ACCOUNT POP UP START
+
+document.querySelector(".btn--mobile--565").addEventListener("click", () => {
+  document
+    .querySelector(".dropdown__menu--mobile--565")
+    .classList.toggle("active");
+
+  if (!document.querySelector(".dropdown__menu--mobile--565.active")) {
+    document
+      .querySelector(".mobile__menu--sluzby--565")
+      .removeEventListener("click", xx);
+  } else {
+    document
+      .querySelector(".mobile__menu--sluzby--565")
+      .addEventListener("click", () => {});
+  }
+});
+
+// MOBILE MENU 565 PX ACCOUNT POP UP END
+
+// BTN MOBILE 565 EVENTLISTENER START
+
+document.querySelector(".btn--mobile--565").addEventListener("click", () => {
+  document
+    .querySelector(".col__3--links--mobile--565")
+    .classList.toggle("active");
+});
+
+// BTN MOBILE 565 EVENTLISTENER END
