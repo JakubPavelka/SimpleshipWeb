@@ -1,0 +1,94 @@
+#kamdod {
+  margin-bottom: 50rem;
+
+  @media (max-width: 1150px) {
+    margin-bottom: 70rem;
+  }
+  @media (max-width: 910px) {
+    margin-bottom: 130rem;
+  }
+  @media (max-width: 770px) {
+    margin-bottom: 137rem;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 141rem;
+  }
+  @media (max-width: 525px) {
+    margin-bottom: 155rem;
+  }
+}
+
+#popis__zasilky--kamionDod {
+  margin-top: 7rem;
+}
+
+.kamdod__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  grid-template-areas:
+    "datumOd datumDor telefon"
+    "email poznamka . ";
+
+  @media (max-width: 1450px) {
+    max-width: 71rem;
+  }
+  @media (max-width: 770px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "datumOd datumDor"
+      "telefon email"
+      "poznamka poznamka";
+  }
+  @media (max-width: 525px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "datumOd"
+      "datumDor"
+      "telefon"
+      "email"
+      "poznamka";
+  }
+
+  .hodnotaObs {
+    grid-area: hodnotaObs;
+  }
+  .datumOd {
+    grid-area: datumOd;
+  }
+  .datumDor {
+    grid-area: datumDor;
+  }
+  .telefon {
+    grid-area: telefon;
+  }
+  .email {
+    grid-area: email;
+  }
+  .poznamka {
+    grid-area: poznamka;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+#first__row--kamdod {
+  flex-direction: column !important;
+  align-items: start;
+  gap: 2rem;
+}
+
+#col__right--kamdod {
+  height: 70%;
+
+  @media (max-width: 1150px) {
+    height: 58%;
+  }
+}

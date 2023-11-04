@@ -8,6 +8,8 @@ const engFlag = document.querySelector(".dropdown__eng");
 const eur = document.querySelector(".dropdown__eur");
 const menu = document.querySelector(".btn");
 
+// FIRST PAGE START ************************************************************************
+
 // SERVICES EVENT LISTENERS START
 sluzby.addEventListener("mouseenter", () => {
   servicesDropdown.classList.toggle("active");
@@ -35,20 +37,6 @@ czechFlag.addEventListener("click", () => {
   document.querySelector(".dropdown__menu").classList.remove("active");
 });
 // FLAG EVENT LISTENERS END
-
-// MQ AND EVENTLISTENER EUR AND ENG FLAG START
-
-// const mediaQueryList = window.matchMedia("(max-width: 960px)");
-
-// function screenTest(e) {
-//   if (e.matches) {
-//     engFlag.classList.remove("active");
-//     eur.classList.remove("active");
-//     document.querySelector(".dropdown__menu").classList.remove("active");
-//   } else {
-//   }
-// }
-// mediaQueryList.addListener(screenTest);
 
 const mediaQueryList = window.matchMedia("(max-width: 960px)");
 
@@ -272,25 +260,24 @@ document.querySelector(".btn--mobile--565").addEventListener("click", () => {
     .querySelector(".dropdown__menu--mobile--565")
     .classList.toggle("active");
 
-  if (!document.querySelector(".dropdown__menu--mobile--565.active")) {
-    document
-      .querySelector(".mobile__menu--sluzby--565")
-      .removeEventListener("click", xx);
-  } else {
-    document
-      .querySelector(".mobile__menu--sluzby--565")
-      .addEventListener("click", () => {});
-  }
+  document.querySelector(".overlay").classList.toggle("active");
+
+  document.getElementById("body").style.overflow = "hidden";
 });
 
 // MOBILE MENU 565 PX ACCOUNT POP UP END
 
 // BTN MOBILE 565 EVENTLISTENER START
 
-document.querySelector(".btn--mobile--565").addEventListener("click", () => {
-  document
-    .querySelector(".col__3--links--mobile--565")
-    .classList.toggle("active");
+// BTN MOBILE 565 EVENTLISTENER END
+
+// SELECT2 START
+
+$(document).ready(function () {
+  $(".selectFirst").select2();
+  $(".selectSecond").select2();
 });
 
-// BTN MOBILE 565 EVENTLISTENER END
+// SELECT2 END
+
+// FIRST PAGE END ************************************************************************

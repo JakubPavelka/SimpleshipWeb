@@ -18,7 +18,7 @@
     <title>Simpleship</title>
   </head>
   <body id="body">
-    <header id="firstPage">
+    <header id="palety">
       <!-- NAVBAR START ********************************************************* -->
 
       <div class="container">
@@ -661,7 +661,7 @@
             <!-- ROW 1 START ********************************************  -->
 
             <div class="row__1">
-              <a href="index.html" class="col1">
+              <a href="#" class="col1">
                 <img src="./src/img/box.svg" alt="" />
                 <p>Běžný balík</p>
               </a>
@@ -669,7 +669,7 @@
                 <img src="./src/img/dopis.svg" alt="" />
                 <p>Dopis</p>
               </a>
-              <a href="./paleta.html" class="col3">
+              <a href="#" class="col3">
                 <img src="./src/img/paleta.svg" alt="" />
                 <p>Paleta</p>
               </a>
@@ -716,13 +716,14 @@
                         class="postal__img"
                         src="./src/img/postal.svg"
                         alt=""
+                        id="postalImgPalety"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div class="form__main--col--reverse">
-                  <a class="reverse__2" href="#">
+                  <a class="reverse__2" href="#" id="reversePalety">
                     <img src="./src/img/reverse.svg" alt="" />
                   </a>
                 </div>
@@ -762,11 +763,33 @@
                   </div>
                 </div>
               </div>
+              <!-- SECTION PALETY START ********************************************* -->
+              <div class="row__1 paletaRow" id="paletyRow">
+                <a href="#" class="col1">
+                  <p>Europaleta</p>
+                </a>
+                <a href="#" class="col2">
+                  <p>Bloková paleta</p>
+                </a>
+                <a href="#" class="col3">
+                  <p>Podelná paleta</p>
+                </a>
+                <a href="#" class="col4">
+                  <p>Uzavřená paleta</p>
+                </a>
+                <a href="#" class="col5">
+                  <p>Válečková paleta</p>
+                </a>
+              </div>
+              <!-- SECTION PALETY END *********************************************** -->
               <!-- PACKAGE SECTION START ******************************************** -->
               <section class="package">
-                <h3>Zásilka</h3>
                 <div class="package__flex">
-                  <input class="hmotnost" type="text" placeholder="Hmotnost" />
+                  <input
+                    class="hmotnost palety"
+                    type="text"
+                    placeholder="Hmotnost"
+                  />
                   <p class="kg">kg</p>
 
                   <input class="delka" type="text" placeholder="Délka" />
@@ -795,7 +818,7 @@
               <!-- PACKAGE SECTION START 1450 VIEWPORT ********************************** -->
               <section class="package viewport__1450">
                 <h3>Zásilka</h3>
-                <div class="viewport__1450--border">
+                <div class="viewport__1450--border palety">
                   <div class="package__flex">
                     <input
                       class="hmotnost"
@@ -830,8 +853,8 @@
               <!-- PACKAGE SECTION END 1450 VIEWPORT ********************************** -->
               <!-- PACKAGE SECTION START 1150 VIEWPORT ******************************** -->
               <section class="package viewport__1150">
-                <h3>Zásilka</h3>
-                <div class="viewport__1150--border">
+                <h3 class="h3__paleta">Zásilka</h3>
+                <div class="viewport__1150--border palety">
                   <div class="package__flex">
                     <input
                       class="hmotnost"
@@ -867,10 +890,62 @@
                 </div>
               </section>
               <!-- PACKAGE SECTION END 1150 VIEWPORT ************************************ -->
+
+              <!-- SECTION RADIO INPUT START ********************************  -->
+
+              <section class="palety__radio">
+                <h3>Stohovatelnost</h3>
+                <div class="radio__flex">
+                  <input type="radio" name="ano" id="ano" />
+                  <label for="ano">Ano</label>
+                  <input type="radio" name="ne" id="ne" />
+                  <label for="ne">Ne</label>
+                  <input type="radio" name="nevim" id="nevim" />
+                  <label for="nevim">Nevím</label>
+                </div>
+              </section>
+
+              <!-- SECTION RADIO INPUT END *********************************** -->
+
+              <!-- SECTION POPIS ZASILKY START -->
+
+              <section class="popis__zasilky">
+                <div class="first__row">
+                  <h3>Popis zásilky</h3>
+                  <input
+                    class="popis"
+                    type="text"
+                    placeholder="Zde vyplňte popis ..."
+                  />
+                </div>
+                <div class="popis__zasilky--grid">
+                  <input
+                    class="hodnotaObs"
+                    type="text"
+                    placeholder="Hodnota obsahu"
+                  />
+                  <input
+                    class="datumOd"
+                    type="date"
+                    placeholder="Datum odeslání"
+                  />
+                  <input
+                    class="datumDor"
+                    type="date"
+                    placeholder="Datum doručení"
+                  />
+                  <input class="telefon" type="number" placeholder="Telefon" />
+                  <input class="email" type="email" placeholder="E-mail" />
+                  <input class="poznamka" type="text" placeholder="Poznámka" />
+                </div>
+              </section>
+
+              <!-- SECTION POPIS ZASILKY END -->
+
               <!-- PRICE COUNT BUTTON START ********************************************** -->
 
-              <a class="price__count--btn" href="#">
-                Spočítat cenu
+              <a class="palety__btn" href="#">
+                <p>Odeslat poptávku</p>
                 <img src="./src/img/arrow_right.svg" alt="" />
               </a>
 
@@ -900,7 +975,7 @@
         </section>
         <!-- RIGHT COL 910PX VIEWPORT END -->
         <!-- SLIDER SECTION START ******************************************** -->
-        <div class="col__right">
+        <div class="col__right col__rightPalety">
           <div class="col__container">
             <div class="img__container">
               <img src="./src/img/Post_service_tracking_2_.png" alt="" />
@@ -922,195 +997,10 @@
       </section>
     </header>
 
-    <main>
-      <!-- SECTION DOPRAVCI START ****************************** -->
-      <section class="transport">
-        <div class="container">
-          <div class="transport__flex">
-            <h3>Dopravci</h3>
-            <img class="dpd" src="./src/img/dpd 1.svg" alt="" />
-            <img class="fedex" src="./src/img/fedex 1.svg" alt="" />
-            <img class="toptrans" src="./src/img/toptrans 1.svg" alt="" />
-            <img class="tnt" src="./src/img/tnt 1.svg" alt="" />
-            <img class="gls" src="./src/img/gls 1.svg" alt="" />
-            <img class="ups" src="./src/img/ups 1.svg" alt="" />
-          </div>
-        </div>
-      </section>
-      <!-- SECTION DOPRAVCI END ****************************** -->
-      <!-- SECTION HOW IT WORKS START -->
-      <section class="section__howItWorks">
-        <div class="bg">
-          <div class="container">
-            <!-- DESKTOP VIEWPORT START ********************************* -->
-
-            <div class="img__container">
-              <img src="./src/img/howItworks.png" alt="" />
-            </div>
-
-            <!-- DESKTOP VIEWPORT END ********************************* -->
-          </div>
-        </div>
-      </section>
-      <!-- TABLET VIEWPORT START ************************************* -->
-      <section class="section__howItWorksMobile">
-        <div class="bg__mob">
-          <div class="container">
-            <h3>Jak to <span>funguje</span></h3>
-
-            <p>
-              Zdlouhavý proces u nás nečekejte. S námi zásilku zašlete rychle,
-              jednoduše, bezpečně a to vše z pohodlí domova. Vše probíháv rámci
-              níže uvedených čtyř kroků:
-            </p>
-
-            <div class="kroky">
-              <img class="line" src="./src/img/howItWorksLine.svg" alt="" />
-              <div class="objednavka">
-                <h3>Objednávka</h3>
-                <img src="./src/img/howItWorksSquare.svg" alt="" />
-                <p>
-                  Odešlete nám objednávkový formulář s požadovanou službou a
-                  můžete jít pomalu balit zásilku.
-                </p>
-
-                <h2>1</h2>
-              </div>
-              <div class="zabaleni">
-                <h3>Zabalení</h3>
-                <img src="./src/img/howItWorksSquare.svg" alt="" />
-                <p>
-                  Zásilku pečlivě zabalíte, aby po cestě nedošlo k poškození
-                  jejího obsahu.
-                </p>
-                <h2>2</h2>
-              </div>
-              <div class="vyzvednuti">
-                <h3>Vyzvednutí</h3>
-                <img src="./src/img/howItWorksSquare.svg" alt="" />
-                <p>
-                  Zvolíte si vyhovujícího dopravce a svoji zásilku předáte
-                  kurýrovi dané společnosti.
-                </p>
-                <h2>3</h2>
-              </div>
-              <div class="dodani">
-                <h3>Dodání</h3>
-                <img src="./src/img/howItWorksSquare.svg" alt="" />
-                <p>
-                  Zvolený dopravce doručí zásilku na danou adresu. U
-                  <a href="#">vybraných dopravců</a> možnost expresního
-                  doručení.
-                </p>
-                <h2>4</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- TABLET VIEWPORT END ************************************* -->
-      <!-- SECTION HOW IT WORKS END -->
-      <!-- SECTION FAQ START -->
-      <section class="section__faq">
-        <div class="container">
-          <h2>Často se ptáte</h2>
-          <div class="faq__flex">
-            <div class="faq__col--1">
-              <div class="col__1--row--1">
-                <div class="fl">
-                  <h4>Musím zásilku někam nosit?</h4>
-
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--1">
-                  Nemusíte. Vše vyzvedneme přímo u vás a doručíme ke dveřím
-                  adresáta
-                </p>
-              </div>
-              <div class="col__1--row--2">
-                <div class="fl">
-                  <h4>Jak můžu zaplatit za objednávku?</h4>
-
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium, quis!
-                </p>
-              </div>
-              <div class="col__1--row--3">
-                <div class="fl">
-                  <h4>Mohu poslat balík na dobírku?</h4>
-
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, asperiores.
-                </p>
-              </div>
-              <div class="col__1--row--4">
-                <div class="fl">
-                  <h4>Mohu poslat balík na dobírku?</h4>
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, asperiores.
-                </p>
-              </div>
-            </div>
-            <div class="faq__col--2">
-              <div class="col__2--row--1">
-                <div class="fl">
-                  <h4>Jak rychle zásilka dojde?</h4>
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Natus, deleniti?
-                </p>
-              </div>
-              <div class="col__2--row--2">
-                <div class="fl">
-                  <h4>S kým budu komunikovat?</h4>
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--6">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellat, illum.
-                </p>
-              </div>
-              <div class="col__2--row--3">
-                <div class="fl">
-                  <h4>Jak probíhá reklamace?</h4>
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--7">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Suscipit, earum.
-                </p>
-              </div>
-              <div class="col__2--row--4">
-                <div class="fl">
-                  <h4>Mohu objednat přepravu na fakturu?</h4>
-                  <img class="plus" src="./src/img/+.svg" alt="" />
-                </div>
-                <p class="hidden__text--8">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Laboriosam, pariatur.
-                </p>
-              </div>
-            </div>
-          </div>
-          <a class="more" href="#">Další otázky a odpovědi</a>
-        </div>
-      </section>
-      <!-- SECTION FAQ END -->
-    </main>
+    <main></main>
 
     <footer>
-      <section class="footer">
+      <section class="footer--paleta">
         <div class="container">
           <div class="footer__flex">
             <!-- NORMAL VIEWPORT START -->

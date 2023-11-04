@@ -1,0 +1,146 @@
+#kontejner {
+  margin-bottom: 70rem;
+  @media (max-width: 1450px) {
+    margin-bottom: 80rem;
+  }
+  @media (max-width: 1150px) {
+    margin-bottom: 92rem;
+  }
+  @media (max-width: 910px) {
+    margin-bottom: 155rem;
+  }
+  @media (max-width: 770px) {
+    margin-bottom: 160rem;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 163rem;
+  }
+  @media (max-width: 525px) {
+    margin-bottom: 186rem;
+  }
+  @media (max-width: 505px) {
+    margin-bottom: 189rem;
+  }
+}
+
+.hcdc {
+  gap: 1rem !important;
+  p {
+    width: 6rem !important;
+    text-align: center;
+  }
+}
+.package__flex--kontejner {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 9px 32px 0px #efefff;
+  border-radius: 1.2rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 7rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1.5px;
+    height: 100%;
+
+    background-color: #f0f0ff;
+    bottom: 0;
+    left: 58.7rem;
+  }
+  .hmotnost {
+    @include input;
+    width: 51.5rem;
+    padding: 1.7rem 2rem;
+    margin-right: 0.8rem;
+  }
+  .kg {
+    margin: auto 1.3rem;
+    font-size: 1.5rem;
+  }
+
+  .copy__flex {
+    @include flexcenter;
+    margin-left: 2rem;
+
+    .copy {
+      @include flexcenter;
+      gap: 0.8rem;
+      p {
+        @include new__copy--p;
+      }
+    }
+  }
+  .new__flex {
+    @include flexcenter;
+    .new {
+      margin-left: 2.5rem;
+      @include flexcenter;
+      gap: 0.8rem;
+      p {
+        @include new__copy--p;
+      }
+    }
+  }
+}
+
+#col__right--kontejner {
+  height: 57%;
+  @media (max-width: 1150px) {
+    height: 50%;
+  }
+}
+
+.viewport__1450--kontejner {
+  position: relative !important;
+  max-width: 100%;
+  @media (max-width: 1150px) {
+    display: inline !important;
+  }
+  @media (max-width: 750px) {
+    margin: 0 auto !important;
+  }
+
+  h3 {
+    padding-left: 0rem !important;
+    @media (max-width: 910px) {
+      padding-left: 1rem !important;
+    }
+  }
+  .kontejner__1450 {
+    @media (max-width: 910px) {
+      margin: 0 0 6rem 0;
+      width: 100% !important;
+    }
+    @media (max-width: 750px) {
+      width: 100% !important;
+    }
+    .hmotnost {
+      width: 70% !important;
+    }
+
+    p {
+      @media (max-width: 350px) {
+        font-size: 1.3rem !important;
+      }
+    }
+  }
+
+  .package__flex--2--kontejner {
+    padding-top: 2rem !important;
+  }
+}
+
+#packageFlexHmotnostKontejner {
+  @media (max-width: 1450px) {
+    justify-content: start !important;
+  }
+
+  @media (max-width: 910px) {
+    max-width: 100% !important;
+  }
+  .hmotnost {
+    width: 100% !important;
+  }
+}

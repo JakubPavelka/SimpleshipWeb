@@ -1,0 +1,238 @@
+.row__1.paletaRow {
+  justify-content: start !important;
+  gap: 2.5rem !important;
+  margin: 7rem 0 6rem 0;
+
+  @media (max-width: 1150px) {
+    margin: 3.5rem 0;
+  }
+
+  p {
+    width: 14rem;
+  }
+}
+
+.col__right.col__rightPalety {
+  height: 68%;
+}
+
+#palety {
+  margin-bottom: 75rem !important;
+
+  @media (max-width: 1150px) {
+    margin-bottom: 115rem !important;
+  }
+  @media (max-width: 910px) {
+    margin-bottom: 172rem !important;
+  }
+  @media (max-width: 770px) {
+    margin-bottom: 180rem !important;
+  }
+  @media (max-width: 660px) {
+    margin-bottom: 176rem !important;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 186rem !important;
+  }
+  @media (max-width: 525px) {
+    margin-bottom: 210rem !important;
+  }
+  @media (max-width: 420px) {
+    margin-bottom: 205rem !important;
+  }
+}
+
+#posalImgPalety {
+  @media (max-width: 1450px) {
+    right: 14.2rem;
+  }
+}
+
+.viewport__1450--border.palety {
+  margin-bottom: 4rem;
+}
+.viewport__1150--border.palety {
+  margin-bottom: 4rem !important;
+}
+
+.h3__paleta {
+  @media (max-width: 1150px) {
+    margin-top: 0 !important;
+  }
+}
+// RADIO INPUT START
+
+.palety__radio {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  padding-left: 2rem;
+
+  @media (max-width: 1150px) {
+    padding-left: 0.8rem;
+  }
+
+  @media (max-width: 910px) {
+    justify-content: center;
+    gap: 3.8rem;
+    padding-left: 0rem;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .radio__flex {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    @media (max-width: 450px) {
+      gap: 1.5rem;
+    }
+    label {
+      font-size: 1.5rem;
+    }
+    input {
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid #989898;
+
+      &:checked {
+        border: 1px solid #989898;
+      }
+    }
+  }
+}
+
+// RADIO INPUT END
+
+// POPIS ZASILKY START **************************************
+
+.popis__zasilky {
+  @media (max-width: 910px) {
+    max-width: 71rem;
+    margin: 0 auto;
+  }
+  input {
+    @include input;
+    padding-left: 2.5rem;
+  }
+
+  .first__row {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    gap: 5rem;
+    @media (max-width: 1450px) {
+      max-width: 71rem;
+    }
+    @media (max-width: 630px) {
+      gap: 2rem;
+    }
+    @media (max-width: 525px) {
+      flex-direction: column;
+    }
+    h3 {
+      font-size: 1.6rem;
+      width: 15rem;
+    }
+
+    .popis {
+      width: 100%;
+    }
+  }
+
+  .popis__zasilky--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    grid-template-areas:
+      "hodnotaObs datumOd datumDor"
+      "telefon email poznamka";
+
+    @media (max-width: 1450px) {
+      max-width: 71rem;
+    }
+    @media (max-width: 770px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "datumOd datumDor"
+        "hodnotaObs telefon"
+        "email poznamka";
+    }
+    @media (max-width: 525px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas:
+        "datumOd"
+        "datumDor"
+        "hodnotaObs"
+        "telefon"
+        "email"
+        "poznamka";
+    }
+
+    .hodnotaObs {
+      grid-area: hodnotaObs;
+    }
+    .datumOd {
+      grid-area: datumOd;
+    }
+    .datumDor {
+      grid-area: datumDor;
+    }
+    .telefon {
+      grid-area: telefon;
+    }
+    .email {
+      grid-area: email;
+    }
+    .poznamka {
+      grid-area: poznamka;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.palety__btn {
+  position: relative;
+  @include purpleButton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: 1450px) {
+    width: 71rem;
+  }
+  @media (max-width: 910px) {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  img {
+    position: absolute;
+    right: 3rem;
+    @media (max-width: 350px) {
+      right: 2rem;
+    }
+  }
+  p {
+    @media (max-width: 450px) {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// POPIS ZASILKY END **************************************
