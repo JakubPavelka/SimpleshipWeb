@@ -18,7 +18,7 @@
     <title>Simpleship</title>
   </head>
   <body id="body">
-    <header id="vyberDopravce">
+    <header id="platba">
       <!-- NAVBAR START ********************************************************* -->
 
       <div class="container">
@@ -672,8 +672,10 @@
                 <div class="slider__col">
                   <a href="#">
                     <div class="slider__col--container">
-                      <div class="slider__bg active">
-                        <span class="number">2</span>
+                      <div class="slider__bg">
+                        <span class="number"
+                          ><i class="fa-solid fa-check"></i
+                        ></span>
                       </div>
                       <span class="word">Doprava</span>
                     </div>
@@ -681,10 +683,12 @@
                 </div>
                 <i class="fa-solid fa-chevron-right"></i>
                 <div class="slider__col">
-                  <a href="/detaily.html">
+                  <a href="#">
                     <div class="slider__col--container">
                       <div class="slider__bg">
-                        <span class="number">3</span>
+                        <span class="number"
+                          ><i class="fa-solid fa-check"></i
+                        ></span>
                       </div>
                       <span class="word">Detaily</span>
                     </div>
@@ -695,7 +699,9 @@
                   <a href="#">
                     <div class="slider__col--container">
                       <div class="slider__bg">
-                        <span class="number">4</span>
+                        <span class="number"
+                          ><i class="fa-solid fa-check"></i
+                        ></span>
                       </div>
                       <span class="word">Proclení</span>
                     </div>
@@ -705,7 +711,7 @@
                 <div class="slider__col">
                   <a href="#">
                     <div class="slider__col--container">
-                      <div class="slider__bg">
+                      <div class="slider__bg active">
                         <span class="number">5</span>
                       </div>
                       <span class="word">Platba</span>
@@ -730,154 +736,240 @@
 
         <!-- SLIDER DOPRAVA END ****************************** -->
 
-        <!-- UNDER SLIDER TEXT START ****************************** -->
+        <!-- PLATBA START -->
 
-        <div class="container">
-          <section class="under__slider">
-            <div class="under__slider--row">
-              <h1>Výběr dopravce</h1>
-              <p>
-                Vyberte si z nabízených přepravců na základě preferovaných
-                atributů, mezi které patří nejnižší cena, nejrychlejší dodání,
-                spolehlivost nebo poměr ceny a výkonu.
-              </p>
+        <section class="platba">
+          <div class="container">
+            <div class="platba__flex">
+              <div class="platba__col--1">
+                <h2>Platba</h2>
+
+                <h3>Shrnutí</h3>
+
+                <!-- BOX 1 -->
+                <div class="platba__bg">
+                  <div class="platba__bg--flex">
+                    <h4>Parametry</h4>
+                    <a href="#">editovat</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Typ zásilky</p>
+                    <p>Běžný balík</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Počet zásilek</p>
+                    <p>3</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Hmotnost</p>
+                    <p>150 kg</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Délka, šířka, výška</p>
+                    <p>120 x 200 x 300 cm</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Popis obsahu</p>
+                    <p>Autodíly</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Hodnota obsahu</p>
+                    <p>250 000 Kč</p>
+                  </div>
+                </div>
+
+                <!-- BOX 2 -->
+                <div class="platba__bg">
+                  <div class="platba__bg--flex">
+                    <h4>Doprava</h4>
+                    <a href="#">editovat</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Dopravce</p>
+                    <p>FedEx</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Produkt</p>
+                    <p>Prioritní doprava</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Vyzvednutí</p>
+                    <p>16. 10. 2023</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Doručení</p>
+                    <p>26. 10. 2023</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Pojištění</p>
+                    <p>Zdarma do 100 000 Kč</p>
+                  </div>
+                </div>
+
+                <!-- BOX 3 -->
+                <div class="platba__bg">
+                  <div class="platba__bg--flex">
+                    <h4>Odesílatel</h4>
+                    <a href="#">editovat</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Název společnosti</p>
+                    <p>Aremis, s. r. o.</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Jméno a přijmení</p>
+                    <p>Kamil Nehezký</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>E-mail</p>
+                    <p>nehezkyk@gmail.com</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Telefon</p>
+                    <p>606 598 789</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Stát</p>
+                    <p>Česká republika</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Kód oblasti</p>
+                    <p>CZ0698745</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Město</p>
+                    <p>Praha</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>PSČ</p>
+                    <p>102 00</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Ulice</p>
+                    <p>Aremisova</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Číslo popisné</p>
+                    <p>298/35</p>
+                  </div>
+                </div>
+
+                <!-- BOX 4 -->
+                <div class="platba__bg">
+                  <div class="platba__bg--flex">
+                    <h4>Příjemce</h4>
+                    <a href="#">editovat</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Název společnosti</p>
+                    <p>Globalis, s. r. o.</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Jméno a přijmení</p>
+                    <p>Aneta Krásná</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>E-mail</p>
+                    <p>krasnaa@gmail.com</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Telefon</p>
+                    <p>606 578 999</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Stát</p>
+                    <p>Česká republika</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Kód oblasti</p>
+                    <p>CZ0698756</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Město</p>
+                    <p>Praha</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>PSČ</p>
+                    <p>102 00</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Ulice</p>
+                    <p>Globalisova</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Číslo popisné</p>
+                    <p>158/7</p>
+                  </div>
+                </div>
+
+                <!-- BOX 5 -->
+
+                <div class="platba__bg">
+                  <div class="platba__bg--flex">
+                    <h4>Proclení</h4>
+                    <a href="#">editovat</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Důvod exportu</p>
+                    <p>Podnikatelská činnost</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Faktura</p>
+                    <a href="#">faktura01.pdf</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Počet zásilek</p>
+                    <p>3</p>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Obsah a hodnota zásilek</p>
+                    <a href="#">editovat</a>
+                  </div>
+                  <div class="platba__bg--flex">
+                    <p>Plátce cla</p>
+                    <p>Odesílatel</p>
+                  </div>
+                </div>
+              </div>
+              <div class="platba__col--2">
+                <div class="platba__udaje--bg">
+                  <h3>Platba</h3>
+
+                  <h4>Fakturační údaje</h4>
+
+                  <div class="platba__udaje--bg--grid">
+                    <input type="text" placeholder="Jméno *" />
+                    <input type="text" placeholder="Přijmení *" />
+                    <input type="email" placeholder="Email *" />
+                    <input type="number" placeholder="Telefon *" />
+                    <select name="platbaUdaje__zeme" id="platbaUdaje__zeme">
+                      <option value="cr">Česká republika</option>
+                      <option value="cr">Česká republika</option>
+                      <option value="cr">Česká republika</option>
+                      <option value="cr">Česká republika</option>
+                    </select>
+                    <input type="text" placeholder="Kód oblasti *" />
+                    <input type="text" placeholder="Město *" />
+                    <input type="text" placeholder="PSČ *" />
+                    <input type="text" placeholder="Ulice *" />
+                    <input type="text" placeholder="Číslo popisné *" />
+                  </div>
+
+                  <div class="platba__udaje--bg--flex">
+                    <input name="firemniUdaje" type="checkbox" />
+                    <label for="firemniUdaje">Přidat firemní údaje</label>
+                    <input name="stejne" type="checkbox" />
+                    <label for="stejne">Stejné jako údaje odesilatele</label>
+                  </div>
+
+                  <h4>Platební metody</h4>
+                </div>
+              </div>
             </div>
-          </section>
-
-          <!-- UNDER SLIDER TEXT END ****************************** -->
-
-          <!-- CARDS START **************************************** -->
-
-          <section class="cards__dopravci">
-            <!-- DPD -->
-
-            <div class="cards__dopravci--card">
-              <img class="dpd__img" src="./src/img/dpd 1 c-svg.svg" alt="" />
-              <h4>Prioritní doprava</h4>
-              <p class="p__odeslani">16.10 2023</p>
-              <p class="p__doruceni">26.10 2023</p>
-              <p class="p__zdarma">Zdarma do 100 000 Kč</p>
-
-              <h2>2 459 Kč</h2>
-              <p class="light__p">1 958 Kč bez DPH</p>
-
-              <a class="cards__dopravci--btn" href="#"> Zvolit dopravce </a>
-            </div>
-
-            <!-- FEDEX -->
-
-            <div class="cards__dopravci--card">
-              <img class="fedex__img" src="./src/img/fedex 1.svg" alt="" />
-              <h4>Prioritní doprava</h4>
-              <p class="p__odeslani">16.10 2023</p>
-              <p class="p__doruceni">26.10 2023</p>
-              <p class="p__zdarma">Zdarma do 100 000 Kč</p>
-
-              <h2>2 759 Kč</h2>
-              <p class="light__p">2 258 Kč bez DPH</p>
-
-              <a class="cards__dopravci--btn" href="#"> Zvolit dopravce </a>
-            </div>
-
-            <!-- TOPTRANS -->
-
-            <div class="cards__dopravci--card">
-              <img
-                class="toptrans__img"
-                src="./src/img/toptrans 1.svg"
-                alt=""
-              />
-              <h4>Prioritní doprava</h4>
-              <p class="p__odeslani">16.10 2023</p>
-              <p class="p__doruceni">26.10 2023</p>
-              <p class="p__zdarma">Zdarma do 100 000 Kč</p>
-
-              <h2>2 835 Kč</h2>
-              <p class="light__p">2 364 Kč bez DPH</p>
-
-              <a class="cards__dopravci--btn" href="#"> Zvolit dopravce </a>
-            </div>
-
-            <!-- TNT -->
-
-            <div class="cards__dopravci--card">
-              <img class="tnt__img" src="./src/img/tnt 1 n.svg" alt="" />
-              <h4>Prioritní doprava</h4>
-              <p class="p__odeslani">16.10 2023</p>
-              <p class="p__doruceni">26.10 2023</p>
-              <p class="p__zdarma">Zdarma do 100 000 Kč</p>
-
-              <h2>2 258 Kč</h2>
-              <p class="light__p">1 755 Kč bez DPH</p>
-
-              <a class="cards__dopravci--btn" href="#"> Zvolit dopravce </a>
-            </div>
-
-            <!-- GLS -->
-
-            <div class="cards__dopravci--card">
-              <img class="gls__img" src="./src/img/gls 1 n.svg" alt="" />
-              <h4>Prioritní doprava</h4>
-              <p class="p__odeslani">16.10 2023</p>
-              <p class="p__doruceni">26.10 2023</p>
-              <p class="p__zdarma">Zdarma do 100 000 Kč</p>
-
-              <h2>2 459 Kč</h2>
-              <p class="light__p">1 958 Kč bez DPH</p>
-
-              <a class="cards__dopravci--btn" href="#"> Zvolit dopravce </a>
-            </div>
-
-            <!-- UPS -->
-
-            <div class="cards__dopravci--card">
-              <img class="ups__img" src="./src/img/ups 1.svg" alt="" />
-              <h4>Prioritní doprava</h4>
-              <p class="p__odeslani">16.10 2023</p>
-              <p class="p__doruceni">26.10 2023</p>
-              <p class="p__zdarma">Zdarma do 100 000 Kč</p>
-
-              <h2>2 459 Kč</h2>
-              <p class="light__p">1 958 Kč bez DPH</p>
-
-              <a class="cards__dopravci--btn" href="#"> Zvolit dopravce </a>
-            </div>
-
-            <div class="textOnLeft">
-              <h3>Produkt</h3>
-              <h3>Vyzvednutí</h3>
-              <h3>Doručení</h3>
-              <h3>Pojištění</h3>
-            </div>
-          </section>
-
-          <!-- BUTTONS START -->
-
-          <div class="cards__buttons">
-            <a class="predchoziKrok" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="21"
-                height="11"
-                viewBox="0 0 21 11"
-                fill="none"
-              >
-                <path
-                  d="M20.6311 5.12152H1.29663L5.87201 0.650574C6.22164 0.309159 5.70308 -0.23428 5.3488 0.109956C5.34882 0.109933 0.110125 5.22905 0.110125 5.22905C-0.0427355 5.36901 -0.0305611 5.62157 0.110144 5.76969C0.110125 5.76969 5.34882 10.891 5.34882 10.891C5.7014 11.2311 6.22288 10.6978 5.87199 10.3504C5.87201 10.3504 1.29493 5.87575 1.29493 5.87575H20.6311C21.1105 5.8712 21.1352 5.13071 20.6311 5.12152Z"
-                  fill="#0E1C4C"
-                />
-              </svg>
-
-              <span>Předchozí krok</span>
-            </a>
-            <a class="dalsiKrok" href="#">
-              <p>Pokračovat</p>
-              <i class="fa-solid fa-chevron-right"></i>
-            </a>
           </div>
+        </section>
 
-          <!-- CARDS END **************************************** -->
-        </div>
+        <!-- PLATBA END -->
       </section>
     </header>
 

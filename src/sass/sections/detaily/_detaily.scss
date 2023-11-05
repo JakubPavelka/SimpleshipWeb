@@ -1,0 +1,158 @@
+#detaily {
+  margin-bottom: 72rem;
+
+  @media (max-width: 1040px) {
+    margin-bottom: 147rem;
+  }
+
+  @media (max-width: 910px) {
+    margin-bottom: 146rem;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 230rem;
+  }
+  @media (max-width: 392px) {
+    margin-bottom: 234rem;
+  }
+  @media (max-width: 356px) {
+    margin-bottom: 236rem;
+  }
+}
+
+#detailyFirAdr {
+  margin-bottom: 87rem;
+
+  @media (max-width: 1040px) {
+    margin-bottom: 177rem;
+  }
+
+  @media (max-width: 910px) {
+    margin-bottom: 178rem;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 280rem;
+  }
+  @media (max-width: 392px) {
+    margin-bottom: 281rem;
+  }
+  @media (max-width: 356px) {
+    margin-bottom: 280rem;
+  }
+}
+
+#under__slider--detaily {
+  span {
+    font-weight: 600;
+  }
+}
+
+.detaily {
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1040px) {
+      flex-direction: column;
+    }
+    .detaily__col--1,
+    .detaily__col--2 {
+      h4 {
+        font-size: 2.4rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+
+      .input__flex {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        @media (max-width: 365px) {
+          gap: 0.7rem;
+        }
+        input {
+          width: 2rem;
+          height: auto;
+          @media (max-width: 365px) {
+            width: 1.8rem;
+          }
+        }
+        label {
+          font-size: 1.5rem;
+          @media (max-width: 365px) {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      h5 {
+        font-size: 1.6rem;
+      }
+
+      .zakladniUdaje {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+
+      .zasilka {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .detaily__col--1--grid,
+      .detaily__col--2--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem 1.5rem;
+
+        @media (max-width: 500px) {
+          grid-template-columns: 1fr;
+        }
+        input {
+          @include input;
+          width: 100%;
+          padding-left: 2.5rem !important;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        select {
+          @include selectInput;
+          width: 100%;
+          margin-bottom: 0;
+          appearance: none;
+          padding-left: 2.5rem !important;
+        }
+
+        .nazevSpol {
+          grid-column: 1 / 3;
+          @media (max-width: 500px) {
+            grid-column: 1 / 2;
+          }
+        }
+      }
+
+      .zasilka-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1.5rem;
+
+        @media (max-width: 500px) {
+          grid-template-columns: 1fr;
+        }
+
+        input {
+          @include input;
+          padding-left: 2.5rem !important;
+        }
+      }
+
+      .naplanovani {
+        @include input;
+        width: 100%;
+        padding-left: 2.5rem !important;
+      }
+    }
+  }
+}

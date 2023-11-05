@@ -1,0 +1,283 @@
+#vyberDopravce {
+  margin-bottom: 65rem;
+
+  @media (max-width: 1050px) {
+    margin-bottom: 188rem;
+  }
+
+  @media (max-width: 690px) {
+    margin-bottom: 375rem;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 375rem;
+  }
+}
+
+#form__vyberDopravce {
+  padding-top: 0rem !important;
+
+  // SLIDER START *************************************************
+  .gray__bg {
+    padding: 4rem 0;
+    background: rgba(239, 239, 255, 0.62);
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    .slider {
+      &__flex {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        overflow-y: hidden;
+
+        @media (max-width: 1050px) {
+          justify-content: start;
+          gap: 2rem;
+        }
+
+        .slider__col {
+          &--container {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 1rem;
+            line-height: 2.1rem;
+
+            @media (max-width: 1050px) {
+              width: 100%;
+            }
+            .slider__bg {
+              width: 3.2rem;
+              height: 3.2rem;
+              border: 1px solid $darkBlue;
+              border-radius: 50%;
+              .number {
+                font-size: 1.8rem;
+                color: $darkBlue;
+                font-weight: 400;
+                line-height: 3.1rem;
+              }
+            }
+            .slider__bg.active {
+              background-color: $purple;
+              border: none;
+              .number {
+                color: #fff;
+                font-weight: 400;
+              }
+            }
+            .word {
+              font-size: 1.7rem;
+            }
+          }
+        }
+        .fa-chevron-right {
+          @media (max-width: 1050px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  // SLIDER END *************************************************
+
+  // UNDER SLIDER TEXT START *******************************************
+  .under__slider {
+    margin-top: 7rem;
+    @media (max-width: 1050px) {
+      margin-top: 4rem;
+    }
+    &--row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 1050px) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      h1 {
+        font-size: 4.5rem;
+
+        @media (max-width: 690px) {
+          font-size: 2.8rem;
+        }
+      }
+
+      p {
+        font-size: 1.45rem;
+        max-width: 59rem;
+        line-height: 2.6rem;
+        @media (max-width: 1050px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  // UNDER SLIDER TEXT END *********************************************
+
+  // CARDS START ***********************************************
+
+  .cards__dopravci {
+    position: relative;
+    display: inline-flex;
+    gap: 4rem;
+    margin-top: 7rem;
+
+    @media (max-width: 1050px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      place-items: center;
+      gap: 0rem;
+      row-gap: 4rem;
+      max-width: 70rem;
+      margin: 3.5rem auto 0 auto;
+    }
+    @media (max-width: 690px) {
+      grid-template-columns: 1fr;
+    }
+
+    &--card {
+      padding: 2.5rem;
+      background-color: #fff;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+      border-radius: 3rem;
+      width: 30rem !important;
+      height: 58.1rem;
+      text-align: center;
+
+      @media (max-width: 450px) {
+        max-width: 28rem;
+      }
+      img {
+        width: 100%;
+        height: 8%;
+        margin-bottom: 4rem;
+      }
+
+      .ups__img {
+        height: 10%;
+      }
+      .dpd__img {
+        height: 10%;
+      }
+
+      h4 {
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        margin-bottom: 4rem;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: rgba(13, 28, 76, 0.13);
+          position: absolute;
+          bottom: -2rem;
+          left: 0;
+        }
+      }
+
+      .p__odeslani,
+      .p__doruceni,
+      .p__zdarma {
+        position: relative;
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: rgba(13, 28, 76, 0.13);
+          position: absolute;
+          bottom: -1.8rem;
+          left: 0;
+        }
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .light__p {
+        font-size: 1.4rem;
+      }
+
+      .cards__dopravci--btn {
+        @include purpleButton;
+      }
+    }
+
+    .textOnLeft {
+      @media (max-width: 1550px) {
+        display: none;
+      }
+      left: -15rem;
+      top: 12.3rem;
+      position: absolute;
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  // CARDS END *************************************************
+
+  // BUTTONS START
+
+  .cards__buttons {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 690px) {
+      flex-direction: column-reverse;
+    }
+    .predchoziKrok {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        font-size: 1.4rem;
+        @media (max-width: 690px) {
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      svg {
+        @media (max-width: 690px) {
+          display: none;
+        }
+      }
+    }
+
+    .dalsiKrok {
+      @include purpleButton;
+      display: flex;
+      align-items: center;
+      width: 20rem !important;
+      justify-content: center;
+      position: relative;
+      p {
+        font-size: 1.6rem;
+        color: #fff;
+      }
+
+      i {
+        position: absolute;
+        right: 1.5rem;
+      }
+    }
+  }
+}

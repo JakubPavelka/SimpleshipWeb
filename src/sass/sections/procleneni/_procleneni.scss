@@ -1,0 +1,195 @@
+#procleneni {
+  margin-bottom: 60rem;
+
+  @media (max-width: 1050px) {
+    margin-bottom: 65rem;
+  }
+  @media (max-width: 850px) {
+    margin-bottom: 80rem;
+  }
+  @media (max-width: 690px) {
+    margin-bottom: 132rem;
+  }
+  @media (max-width: 518px) {
+    margin-bottom: 136rem;
+  }
+}
+
+#under__slider--procleni {
+  margin-top: 6rem !important;
+}
+
+.procleneni {
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 690px) {
+      flex-direction: column;
+    }
+    .procleneni__col--1 {
+      width: 45%;
+      @media (max-width: 690px) {
+        width: 100%;
+      }
+      h4 {
+        font-size: 2.4rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+        @media (max-width: 750px) {
+          font-size: 2rem;
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 20rem;
+        resize: none;
+        padding: 2rem;
+        color: $darkBlue;
+        border-radius: 1rem;
+        &::placeholder {
+          color: $darkBlue;
+        }
+      }
+      .faktura {
+        margin-top: 4rem;
+        margin-bottom: 2.8rem;
+      }
+      .faktura__flex {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        a {
+          width: 50%;
+          border: 1px solid $purple;
+          color: $purple;
+          padding: 1.5rem 0;
+          text-align: center;
+          border-radius: 1rem;
+          font-size: 1.4rem;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $purple;
+            color: #fff;
+          }
+        }
+      }
+
+      .stahnoutFakturu {
+        @include purpleButton;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+        font-weight: 700;
+        img {
+        }
+        p {
+          font-size: 1.4rem;
+          color: #fff;
+        }
+      }
+    }
+
+    .procleneni__col--2 {
+      width: 45%;
+      @media (max-width: 690px) {
+        width: 100%;
+      }
+      h4 {
+        font-size: 2.4rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+        @media (max-width: 750px) {
+          font-size: 2rem;
+        }
+      }
+      .background {
+        box-shadow: 0px 9px 32px 0px #efefff;
+        background-color: #fff;
+        border-radius: 1.2rem;
+        padding: 2.5rem;
+        &__grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto;
+          gap: 1.4rem;
+          margin-bottom: 3rem;
+          @media (max-width: 1100px) {
+            grid-template-columns: 1fr 1fr;
+          }
+          @media (max-width: 850px) {
+            grid-template-columns: 1fr;
+          }
+          input {
+            @include input;
+            width: 100%;
+            padding: 1.5rem 0 1.5rem 2rem;
+          }
+        }
+
+        &__flex {
+          display: flex;
+          gap: 2rem;
+          @media (max-width: 350px) {
+            gap: 1rem;
+          }
+          &--col--1,
+          &--col--2 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+              width: 2.1rem;
+              height: auto;
+            }
+            p {
+              font-size: 1.5rem;
+              text-decoration: underline;
+              color: $blue;
+              &:hover {
+                text-decoration: none;
+              }
+              @media (max-width: 350px) {
+                font-size: 1.3rem;
+              }
+            }
+          }
+
+          &--col--2 {
+            img {
+              width: 1.6rem;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      .platceCla {
+      }
+      .radio__flex {
+        display: flex;
+        gap: 1rem;
+        @media (max-width: 365px) {
+          gap: 0.7rem;
+        }
+        input {
+          width: 2rem;
+          height: auto;
+          @media (max-width: 365px) {
+            width: 1.8rem;
+          }
+        }
+        label {
+          font-size: 1.5rem;
+          @media (max-width: 365px) {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
