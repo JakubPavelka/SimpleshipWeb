@@ -1,0 +1,570 @@
+.form.histobj {
+  .container {
+    @media (max-width: 540px) {
+      padding: 0 0.5rem;
+    }
+    .historie__objednavek {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 1115px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 4rem;
+      }
+      .historie__objednavek--col--1 {
+        width: 30%;
+
+        @media (max-width: 1250px) {
+          width: 23%;
+        }
+        @media (max-width: 1115px) {
+          display: flex;
+          width: 75%;
+          justify-content: space-between;
+        }
+
+        @media (max-width: 1080px) {
+          width: 100%;
+        }
+
+        @media (max-width: 600px) {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .muj__ucet {
+          background-color: #f5f5ff;
+          border-radius: 1.2rem;
+          padding: 3.5rem 4.5rem;
+          margin-bottom: 4rem;
+
+          @media (max-width: 1250px) {
+            padding: 2rem 2.5rem;
+          }
+
+          @media (max-width: 1115px) {
+            width: 48%;
+            margin-bottom: 0;
+            padding: 3.5rem 4.5rem;
+          }
+
+          @media (max-width: 600px) {
+            width: 100%;
+          }
+
+          h4 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+          }
+
+          a {
+            font-size: 1.45rem;
+            display: block;
+            margin-bottom: 2rem;
+            &:last-child {
+              margin-bottom: 0rem;
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .potrebujetePoradit {
+          background-color: #f5f5ff;
+          border-radius: 1.2rem;
+          padding: 3.5rem 4.5rem;
+
+          @media (max-width: 1250px) {
+            padding: 2rem 2.5rem;
+          }
+
+          @media (max-width: 1115px) {
+            width: 48%;
+            padding: 3.5rem 4.5rem;
+          }
+
+          @media (max-width: 600px) {
+            width: 100%;
+          }
+
+          h4 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+          }
+
+          a {
+            font-size: 1.45rem;
+            color: $blue;
+            text-decoration: underline;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            display: block;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          p {
+            font-size: 1.45rem;
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      .historie__objednavek--col--2 {
+        width: 65%;
+
+        @media (max-width: 1250px) {
+          width: 75%;
+        }
+
+        @media (max-width: 1080px) {
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 3.3rem;
+          margin-bottom: 6rem;
+
+          @media (max-width: 680px) {
+            text-align: center;
+            margin-bottom: 4rem;
+          }
+        }
+
+        .historie__col--2--flex {
+          display: flex;
+          position: relative;
+          gap: 4rem;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 6rem;
+
+          @media (max-width: 680px) {
+            flex-direction: column;
+          }
+
+          &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #e9e9ff;
+            position: absolute;
+            bottom: -3rem;
+            left: 0;
+            border-radius: 1rem;
+
+            @media (max-width: 680px) {
+              bottom: -2rem;
+            }
+          }
+          &::before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #e9e9ff;
+            position: absolute;
+            top: 0rem;
+            left: 0;
+            border-radius: 1rem;
+            display: none;
+
+            @media (max-width: 680px) {
+              top: 4.7rem;
+              display: block;
+            }
+          }
+
+          .objednavky {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 3px;
+              background-color: #e9e9ff;
+              position: absolute;
+              bottom: -3rem;
+              left: 0;
+              border-radius: 1rem;
+
+              @media (max-width: 680px) {
+                display: block;
+                bottom: -2rem;
+              }
+            }
+
+            p {
+              font-size: 2rem;
+            }
+
+            .span__bg {
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid $darkBlue;
+
+              span {
+                font-size: 1.5rem;
+              }
+            }
+          }
+
+          a.active {
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 3px;
+              position: absolute;
+              background-color: $blue;
+              bottom: -3rem;
+              left: 0;
+              z-index: 10;
+              border-radius: 1rem;
+
+              @media (max-width: 680px) {
+                bottom: -2rem;
+              }
+            }
+
+            p {
+              font-weight: 700;
+            }
+
+            .span__bg {
+              background-color: #375cf6;
+              border: none;
+
+              span {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .tabulka__grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          row-gap: 1.2rem;
+
+          .tabulka__grid--container {
+            padding: 2.5rem 2rem;
+            background-color: #26a11b14;
+            border-radius: 1.2rem;
+
+            @media (max-width: 550px) {
+              padding: 2rem 1.2rem;
+            }
+
+            .tabulka__grid--item {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr 1fr 4rem;
+
+              @media (max-width: 540px) {
+                grid-template-columns: 0.7fr 1fr 1fr 1fr 0.8fr 0.5fr;
+              }
+              @media (max-width: 400px) {
+                grid-template-columns: 0.55fr 0.7fr 0.7fr 0.8fr 0.7fr 0.2fr;
+              }
+              @media (max-width: 340px) {
+                grid-template-columns: 0.45fr 0.7fr 0.6fr 0.8fr 0.6fr 0.2fr;
+              }
+
+              img {
+                cursor: pointer;
+                margin: auto;
+
+                @media (max-width: 680px) {
+                  width: 1.5rem;
+                  height: auto;
+                }
+              }
+
+              .shorterId {
+                display: none;
+
+                @media (max-width: 680px) {
+                  display: block;
+                }
+                @media (max-width: 340px) {
+                  font-size: 1rem;
+                }
+              }
+
+              a {
+                font-size: 1.6rem;
+                color: $blue;
+                text-decoration: underline;
+
+                @media (max-width: 680px) {
+                  font-size: 1.3rem;
+                }
+
+                @media (max-width: 540px) {
+                  font-size: 1.2rem;
+                }
+
+                @media (max-width: 340px) {
+                  font-size: 1rem;
+                }
+
+                &:hover {
+                  text-decoration: none;
+                }
+
+                &:first-child {
+                  @media (max-width: 680px) {
+                    display: none;
+                  }
+                }
+              }
+
+              p {
+                font-size: 1.6rem;
+                @media (max-width: 680px) {
+                  font-size: 1.3rem;
+                }
+
+                @media (max-width: 540px) {
+                  font-size: 1.2rem;
+                }
+                @media (max-width: 340px) {
+                  font-size: 1rem;
+                }
+              }
+
+              h5 {
+                font-size: 1.6rem;
+                color: #26a11b;
+                @media (max-width: 680px) {
+                  font-size: 1.3rem;
+                }
+
+                @media (max-width: 540px) {
+                  font-size: 1.1rem;
+                }
+                @media (max-width: 340px) {
+                  font-size: 1rem;
+                }
+              }
+
+              h5.neuhrazeno {
+                font-weight: 700;
+                color: #ff3a2e;
+                @media (max-width: 680px) {
+                  font-size: 1.3rem;
+                }
+
+                @media (max-width: 540px) {
+                  font-size: 1.1rem;
+                }
+
+                @media (max-width: 340px) {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+
+          .tabulka__grid--container.first {
+            padding: 1rem 2rem;
+            background-color: #fff !important;
+
+            @media (max-width: 360px) {
+              padding: 1rem 1rem 0rem 1rem;
+            }
+
+            h5 {
+              font-size: 1.5rem;
+              font-weight: 700;
+              color: $darkBlue;
+
+              @media (max-width: 680px) {
+                font-size: 1.4rem;
+              }
+
+              @media (max-width: 540px) {
+                font-size: 1.1rem;
+              }
+            }
+
+            .h5__first {
+              @media (max-width: 360px) {
+                padding-left: 0rem;
+                padding-right: 0rem;
+              }
+              @media (max-width: 340px) {
+                font-size: 1rem;
+              }
+            }
+            .h5__second {
+              @media (max-width: 360px) {
+                padding-left: 0.5rem;
+                padding-right: 0rem;
+              }
+              @media (max-width: 340px) {
+                font-size: 1rem;
+              }
+            }
+
+            .h5__third {
+              @media (max-width: 360px) {
+                padding-left: 0.5rem;
+                padding-right: 0rem;
+              }
+              @media (max-width: 340px) {
+                font-size: 1rem;
+              }
+            }
+            .h5__fourth {
+              @media (max-width: 360px) {
+                padding-left: 0.5rem;
+                padding-right: 0rem;
+              }
+              @media (max-width: 340px) {
+                font-size: 1rem;
+              }
+            }
+            .h5__fifth {
+              @media (max-width: 360px) {
+                padding-left: 0rem;
+                padding-right: 0rem;
+              }
+              @media (max-width: 340px) {
+                font-size: 1rem;
+              }
+            }
+            .h5__sixth {
+              @media (max-width: 360px) {
+                padding-left: 0rem;
+                padding-right: 0rem;
+              }
+              @media (max-width: 340px) {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          .tabulka__grid--container.neuhrazeno {
+            background-color: #ff3a2e14;
+
+            .h5__neuhrazeno {
+              font-weight: 700;
+              color: #ff3a2e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rekapitulace__grid--objednavky {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 4rem;
+  margin-top: 3rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 540px) {
+    gap: 0rem;
+  }
+
+  .platba__bg {
+    @include platbaBox;
+    background-color: transparent;
+    border: 1px dashed $blue;
+    margin-bottom: 0rem;
+  }
+
+  .platba__bg {
+    @include platbaBox;
+    background-color: transparent;
+    border: 1px dashed $blue;
+    margin-bottom: 0rem;
+
+    .platba__bg--flex {
+      @media (max-width: 540px) {
+        display: flex !important;
+      }
+    }
+
+    .platba__bg--flex.mobile__view {
+      @media (max-width: 540px) {
+        display: none !important;
+      }
+    }
+  }
+
+  .sixth {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+
+    @media (max-width: 800px) {
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+.rekapitulace__grid--objednavky.active {
+  display: grid;
+}
+
+// OBJEDNAVKY B FORM
+
+#historie__objednavek--b {
+  .tabulka__grid--container {
+    background-color: #f5f5ff;
+
+    .tabulka__grid--item {
+      h5 {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// OBJEDNAVKY A 2
+
+#historie__objednavek--a2 {
+  .p__container {
+    background-color: rgba(255, 58, 46, 0.08);
+    padding: 2.5rem 3.3rem;
+    max-width: 65rem;
+    border-radius: 1.2rem;
+    margin-top: 8rem;
+
+    @media (max-width: 400px) {
+      padding: 2rem 2.5rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+
+      @media (max-width: 690px) {
+        text-align: center;
+      }
+    }
+  }
+}

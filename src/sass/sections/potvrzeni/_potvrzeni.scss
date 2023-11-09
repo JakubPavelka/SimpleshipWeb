@@ -1,0 +1,287 @@
+#potvrzeni_kartaA {
+  margin-bottom: 130rem;
+}
+
+.potvrzeni {
+  .heading__flex {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    @media (max-width: 600px) {
+      gap: 1.5rem;
+    }
+    .heading__flex--bg {
+      display: flex;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: $purple;
+
+      @media (max-width: 600px) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      .check {
+        font-size: 3rem;
+        color: #fff;
+        line-height: 5.2rem;
+
+        @media (max-width: 600px) {
+          font-size: 2.4rem;
+          line-height: 3.8rem;
+        }
+      }
+    }
+    h1 {
+      font-size: 4.5rem;
+      color: $purple;
+      font-weight: 700;
+
+      @media (max-width: 600px) {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  .potvrzeni__bg {
+    box-shadow: 0px 9px 32px 0px #efefff;
+    width: 100%;
+    background-color: #fff;
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    .potvrzeni__h3 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+
+      @media (max-width: 600px) {
+        font-size: 1.7rem;
+      }
+      a {
+        font-size: 2.4rem;
+        color: $purple;
+        text-decoration: underline;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 2.6rem;
+      text-align: center;
+      max-width: 58rem;
+      margin: 0 auto;
+
+      @media (max-width: 600px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .kontaktovat__a {
+      font-size: 1.5rem;
+
+      @media (max-width: 600px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .potvrzeni__button {
+      @include purpleButton;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 15%;
+      margin: 4rem auto 0 auto;
+
+      @media (max-width: 1100px) {
+        width: 25%;
+      }
+
+      @include md {
+        width: 100%;
+      }
+
+      p {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      i {
+        position: absolute;
+        right: 1.8rem;
+      }
+    }
+
+    .potvrzeni__button.zaplaceno {
+      position: relative;
+      width: 40%;
+      text-align: start;
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+      i {
+        right: 0 !important;
+        left: 2rem;
+
+        @media (max-width: 370px) {
+          display: none;
+        }
+      }
+      p {
+        line-height: normal;
+      }
+    }
+  }
+
+  .rekapitulace__h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 6rem;
+  }
+
+  .rekapitulace__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 540px) {
+      gap: 0rem;
+    }
+
+    .platba__bg {
+      @include platbaBox;
+      margin-bottom: 0rem;
+    }
+
+    .platba__bg {
+      @include platbaBox;
+      margin-bottom: 0rem;
+    }
+
+    .sixth {
+      grid-column: 2 / 3;
+      grid-row: 3 / 5;
+
+      @media (max-width: 800px) {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+}
+
+// KARTA B
+
+#heading__flex--kartaB {
+  .heading__flex--bg {
+    @media (max-width: 365px) {
+      width: 3rem;
+      height: 3rem;
+    }
+    .check {
+      @media (max-width: 365px) {
+        font-size: 2.1rem;
+        line-height: 3.2rem;
+      }
+    }
+  }
+  h1 {
+    @media (max-width: 365px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+// PREVOD
+.prevod__p {
+  max-width: 72rem !important;
+}
+
+.qr__bg {
+  border: 1px dashed #6c6cff !important;
+  border-radius: 3rem;
+  border-color: #fff;
+  max-width: 60rem;
+  margin: 5rem auto 6rem auto;
+  padding: 5.5rem 6rem;
+  @media (max-width: 605px) {
+    padding: 4rem 4.5rem;
+  }
+  @media (max-width: 410px) {
+    padding: 4rem 1.5rem;
+  }
+
+  .qr__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 605px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .qr__bg--col1 {
+    }
+
+    .qr__bg--col2 {
+      .qr__h4 {
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        margin-bottom: 1.3rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 410px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+// STAV PLATBY
+
+.stav__platby {
+  max-width: 24.5rem;
+  margin: 0 auto;
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .stav__platby--h4 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .stav__platby--h4--neuhrazeno {
+      font-size: 1.6rem;
+      font-weight: 700;
+      background: rgba(255, 125, 125, 0.08);
+      border-radius: 1rem;
+      padding: 0.4rem 1.5rem;
+      color: #ff3333;
+    }
+  }
+}

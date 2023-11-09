@@ -720,12 +720,12 @@
                 </div>
                 <i class="fa-solid fa-chevron-right"></i>
                 <div class="slider__col">
-                  <a href="#">
+                  <a href="./potvrzeni-kartaA.html">
                     <div class="slider__col--container">
                       <div class="slider__bg">
                         <span class="number">6</span>
                       </div>
-                      <span class="word">Rekapitulace</span>
+                      <span class="word">Potvrzení</span>
                     </div>
                   </a>
                 </div>
@@ -741,13 +741,20 @@
         <section class="platba">
           <div class="container">
             <div class="platba__flex">
+              <!-- COL 1 -->
+
               <div class="platba__col--1">
                 <h2>Platba</h2>
 
                 <h3>Shrnutí</h3>
 
                 <!-- BOX 1 -->
-                <div class="platba__bg">
+                <div class="platba__bg first">
+                  <div class="platba__bg--flex mobile__view">
+                    <h4>Parametry</h4>
+                    <img src="./src/img/plus.svg" alt="" />
+                  </div>
+
                   <div class="platba__bg--flex">
                     <h4>Parametry</h4>
                     <a href="#">editovat</a>
@@ -779,7 +786,12 @@
                 </div>
 
                 <!-- BOX 2 -->
-                <div class="platba__bg">
+                <div class="platba__bg second">
+                  <div class="platba__bg--flex mobile__view">
+                    <h4>Doprava</h4>
+                    <img src="./src/img/plus.svg" alt="" />
+                  </div>
+
                   <div class="platba__bg--flex">
                     <h4>Doprava</h4>
                     <a href="#">editovat</a>
@@ -807,7 +819,12 @@
                 </div>
 
                 <!-- BOX 3 -->
-                <div class="platba__bg">
+                <div class="platba__bg third">
+                  <div class="platba__bg--flex mobile__view">
+                    <h4>Odesílatel</h4>
+                    <img src="./src/img/plus.svg" alt="" />
+                  </div>
+
                   <div class="platba__bg--flex">
                     <h4>Odesílatel</h4>
                     <a href="#">editovat</a>
@@ -855,7 +872,12 @@
                 </div>
 
                 <!-- BOX 4 -->
-                <div class="platba__bg">
+                <div class="platba__bg fourth">
+                  <div class="platba__bg--flex mobile__view">
+                    <h4>Příjemce</h4>
+                    <img src="./src/img/plus.svg" alt="" />
+                  </div>
+
                   <div class="platba__bg--flex">
                     <h4>Příjemce</h4>
                     <a href="#">editovat</a>
@@ -904,7 +926,12 @@
 
                 <!-- BOX 5 -->
 
-                <div class="platba__bg">
+                <div class="platba__bg fifth">
+                  <div class="platba__bg--flex mobile__view">
+                    <h4>Proclení</h4>
+                    <img src="./src/img/plus.svg" alt="" />
+                  </div>
+
                   <div class="platba__bg--flex">
                     <h4>Proclení</h4>
                     <a href="#">editovat</a>
@@ -931,6 +958,9 @@
                   </div>
                 </div>
               </div>
+
+              <!-- COL 2 -->
+
               <div class="platba__col--2">
                 <div class="platba__udaje--bg">
                   <h3>Platba</h3>
@@ -963,6 +993,110 @@
                   </div>
 
                   <h4>Platební metody</h4>
+
+                  <!-- BOX 1 -->
+                  <div class="platebniMetody__bg">
+                    <input class="radio" type="radio" />
+                    <img src="./src/img/credit_card.png" alt="" />
+                    <div class="platebniMetody__bg--container">
+                      <h4>Online platba kartou</h4>
+                      <p>
+                        Nejrychlejší a nejbezpečnější způsob platby. Přijímáme
+                        karty VISA a Mastercard.
+                      </p>
+                      <h4 class="hidden_h4">0 Kč</h4>
+                    </div>
+                    <h4 class="platba__h4">0 Kč</h4>
+                  </div>
+
+                  <!-- BOX 2 -->
+
+                  <div class="platebniMetody__bg">
+                    <input class="radio" type="radio" />
+                    <img src="./src/img/transfer.svg" alt="" />
+                    <div class="platebniMetody__bg--container">
+                      <h4>Bankovní převod</h4>
+                      <p>
+                        Bezpečný způsob platby avšak pomalý. Platba je zpravidla
+                        připsána do 3 dnů.
+                      </p>
+
+                      <h4 class="hidden_h4">0 Kč</h4>
+                    </div>
+                    <h4 class="platba__h4">0 Kč</h4>
+                  </div>
+
+                  <!-- BOX 3 -->
+
+                  <div class="platebniMetody__bg">
+                    <input class="radio" type="radio" />
+                    <img src="./src/img/list.png" alt="" />
+                    <div class="platebniMetody__bg--container">
+                      <h4>Platba na fakturu</h4>
+                      <p>
+                        Objednávku odešlete nyní, ale zaplatíte až později, čímž
+                        ulevíte Vašemu cash flow.
+                      </p>
+
+                      <h4 class="hidden_h4">+50 Kč</h4>
+                    </div>
+                    <h4 class="platba__h4">+50 Kč</h4>
+                  </div>
+
+                  <!-- REKAPITULACE -->
+
+                  <section class="rekapitulace">
+                    <h4 class="rekapitulace__h4">Rekapitulace</h4>
+
+                    <div class="rekapitulace__bg">
+                      <div class="rekapitulace__bg--flex">
+                        <p>Platba za dopravu</p>
+                        <h4>2 759 Kč</h4>
+                      </div>
+
+                      <div class="rekapitulace__bg--flex">
+                        <p>Pojištění předmětu</p>
+                        <h4>0 Kč</h4>
+                      </div>
+
+                      <div class="rekapitulace__bg--flex">
+                        <p>Poplatek za platbu</p>
+                        <h4>0 Kč</h4>
+                      </div>
+
+                      <div class="rekapitulace__bg--flex line">
+                        <h3 class="cenaCelkem">Cena celkem</h3>
+                        <h3 class="cenaCelkem">2 759 Kč</h3>
+                      </div>
+                    </div>
+
+                    <!-- OBCHODNI PODMINKY -->
+
+                    <div class="obchodniPodminky">
+                      <div class="obchodniPodminky__flex">
+                        <input type="checkbox" />
+                        <p>
+                          Odesláním souhlasíte s
+                          <a href="#">obchodními podmínkami Simpleship</a>
+                        </p>
+                      </div>
+
+                      <div class="obchodniPodminky__flex">
+                        <input type="checkbox" />
+                        <p>
+                          Odesláním souhlasíte s
+                          <a href="#">obchodními podmínkami dopravce</a>
+                        </p>
+                      </div>
+
+                      <div class="obchodniPodminky__btn">
+                        <a href="#">
+                          <p>Objednat a zaplatit</p>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
             </div>
