@@ -622,17 +622,17 @@
     transition: all 0.3s;
     padding: 0 2rem;
 
-    @media (max-width: 680px) {
-      height: 51%;
-    }
+    // @media (max-width: 680px) {
+    //   height: 51%;
+    // }
 
-    @media (max-width: 600px) {
-      margin-top: 3.5rem;
-    }
+    // @media (max-width: 600px) {
+    //   margin-top: 3.5rem;
+    // }
 
-    @media (max-width: 565px) {
-      height: 100svh;
-    }
+    // @media (max-width: 565px) {
+    //   height: 100svh;
+    // }
 
     .mobile__flex {
       display: flex;

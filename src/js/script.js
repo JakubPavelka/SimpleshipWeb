@@ -267,9 +267,17 @@ document.querySelector(".btn--mobile--565").addEventListener("click", () => {
 
 // MOBILE MENU 565 PX ACCOUNT POP UP END
 
-// BTN MOBILE 565 EVENTLISTENER START
+// OVERFLOW FOR BODY WHEN MENU CLICKED
 
-// BTN MOBILE 565 EVENTLISTENER END
+document.querySelector(".col__3--link.menu").addEventListener("click", () => {
+  if (document.querySelector(".col__3--link.menu.active")) {
+    document.getElementById("body").style.overflow = "hidden";
+  } else {
+    document.getElementById("body").style.overflow = "visible";
+  }
+});
+
+// OVERFLOW FOR BODY WHEN MENU CLICKED
 
 // SELECT2 START
 

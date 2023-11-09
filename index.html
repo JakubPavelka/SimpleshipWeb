@@ -699,7 +699,6 @@
                 <div class="form__main--col--1">
                   <h3>Odkud</h3>
                   <div class="form__main--input--left">
-                    <img class="czflag" src="./src/img/czechFlag.svg" alt="" />
                     <select class="selectFirst" name="country1" id="">
                       <option value="0">
                         <span><img src="./src/img/czechFlag.svg" alt="" /></span
@@ -732,7 +731,6 @@
                 <div class="form__main--col--2">
                   <h3>Kam</h3>
                   <div class="form__main--input--right">
-                    <img class="czflag" src="./src/img/czechFlag.svg" alt="" />
                     <select class="selectSecond" name="country2" id="">
                       <option value="0">Česká republika</option>
                       <option value="0">Česká republika</option>
@@ -767,74 +765,9 @@
               <!-- PACKAGE SECTION START ******************************************** -->
               <section class="package">
                 <h3>Zásilka</h3>
-                <div class="package__flex">
-                  <input class="hmotnost" type="text" placeholder="Hmotnost" />
-                  <p class="kg">kg</p>
 
-                  <input class="delka" type="text" placeholder="Délka" />
-                  <p class="x__1">x</p>
-                  <input class="sirka" type="text" placeholder="Šířka" />
-                  <p class="x__2">x</p>
-                  <input class="vyska" type="text" placeholder="Výška" />
-                  <p class="cm">cm</p>
-
-                  <div class="copy__flex">
-                    <a class="copy" href="#">
-                      <img src="./src/img/copy.svg" alt="" />
-                      <p>kopírovat</p>
-                    </a>
-                  </div>
-                  <div class="new__flex">
-                    <a class="new" href="#">
-                      <img src="./src/img/new.svg" alt="" />
-                      <p>nová zásilka</p>
-                    </a>
-                  </div>
-                </div>
-              </section>
-
-              <!-- PACKAGE SECTION END ******************************************** -->
-              <!-- PACKAGE SECTION START 1450 VIEWPORT ********************************** -->
-              <section class="package viewport__1450">
-                <h3>Zásilka</h3>
-                <div class="viewport__1450--border">
-                  <div class="package__flex">
-                    <input
-                      class="hmotnost"
-                      type="text"
-                      placeholder="Hmotnost"
-                    />
-                    <p class="kg">kg</p>
-
-                    <input class="delka" type="text" placeholder="Délka" />
-                    <p class="x__1">x</p>
-                    <input class="sirka" type="text" placeholder="Šířka" />
-                    <p class="x__2">x</p>
-                    <input class="vyska" type="text" placeholder="Výška" />
-                    <p class="cm">cm</p>
-                  </div>
-                  <div class="package__flex--2">
-                    <div class="copy__flex">
-                      <a class="copy" href="#">
-                        <img src="./src/img/copy.svg" alt="" />
-                        <p>kopírovat</p>
-                      </a>
-                    </div>
-                    <div class="new__flex">
-                      <a class="new" href="#">
-                        <img src="./src/img/new.svg" alt="" />
-                        <p>nová zásilka</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- PACKAGE SECTION END 1450 VIEWPORT ********************************** -->
-              <!-- PACKAGE SECTION START 1150 VIEWPORT ******************************** -->
-              <section class="package viewport__1150">
-                <h3>Zásilka</h3>
-                <div class="viewport__1150--border">
-                  <div class="package__flex">
+                <div class="package__grid">
+                  <div class="package__grid--item">
                     <input
                       class="hmotnost"
                       type="text"
@@ -842,41 +775,35 @@
                     />
                     <p class="kg">kg</p>
                   </div>
-                  <div class="package__flex--2">
-                    <input class="delka" type="text" placeholder="Délka" />
-                    <p class="x__1">x</p>
-                    <input class="sirka" type="text" placeholder="Šířka" />
-                    <p class="x__2">x</p>
-                    <input class="vyska" type="text" placeholder="Výška" />
-                    <p class="cm">cm</p>
 
-                    <!-- MOBILE VIEWPORT CM -->
-                    <p class="cm__1">cm</p>
-                    <!-- <p class="cm__2">cm</p>
-                    <p class="cm__3">cm</p> -->
-                    <!-- MOBILE VIEWPORT CM -->
+                  <div class="package__grid--item second">
+                    <input class="delka" type="number" placeholder="Délka" />
+                    <p class="x">x</p>
+                    <input class="sirka" type="number" placeholder="Šířka" />
+                    <p class="x">x</p>
+                    <input class="vyska" type="number" placeholder="Výška" />
+                    <p class="x">cm</p>
                   </div>
-                  <div class="package__flex--3">
-                    <a href="#" class="copy">
-                      <img src="./src/img/copy.svg" alt="" />
+
+                  <div class="package__grid--item-copynew">
+                    <a href="#" class="package__grid--item--col-1">
+                      <img class="copy" src="./src/img/copy.svg" alt="" />
                       <p>kopírovat</p>
                     </a>
-                    <a href="#" class="new">
-                      <img src="./src/img/new.svg" alt="" />
+                    <a href="#" class="package__grid--item--col-2">
+                      <img class="new" src="./src/img/new.svg" alt="" />
                       <p>nová zásilka</p>
                     </a>
                   </div>
                 </div>
+
+                <a class="price__count--btn" href="/vyberDopravce.html">
+                  Spočítat cenu
+                  <img src="./src/img/arrow_right.svg" alt="" />
+                </a>
+
+                <!-- PRICE COUNT BUTTON END ********************************************** -->
               </section>
-              <!-- PACKAGE SECTION END 1150 VIEWPORT ************************************ -->
-              <!-- PRICE COUNT BUTTON START ********************************************** -->
-
-              <a class="price__count--btn" href="/vyberDopravce.html">
-                Spočítat cenu
-                <img src="./src/img/arrow_right.svg" alt="" />
-              </a>
-
-              <!-- PRICE COUNT BUTTON END ********************************************** -->
             </section>
           </div>
         </div>
