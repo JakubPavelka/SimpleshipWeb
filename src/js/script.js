@@ -88,8 +88,13 @@ eur.addEventListener("mouseenter", closeServicesDropdown);
 czechFlag.addEventListener("mouseenter", closeServicesDropdown);
 engFlag.addEventListener("mouseenter", closeServicesDropdown);
 menu.addEventListener("mouseenter", closeServicesDropdown);
+
 //COL 3
 // DROPDOWN CLASS ACTIVE REMOVE WHEN HOVER ON COL 1 COL 2 COL 3 NAV END
+
+document
+  .querySelector(".form")
+  .addEventListener("mouseenter", closeServicesDropdown);
 
 // MENU CLICK EUR ENG REMOVE START
 menu.addEventListener("click", () => {
@@ -277,6 +282,17 @@ document.querySelector(".col__3--link.menu").addEventListener("click", () => {
   }
 });
 
+const mediaQueryList3 = window.matchMedia("(max-width: 960px)");
+
+function screenTest(e) {
+  if (e.matches) {
+    document.querySelector(".mobile__menu").classList.remove("active");
+    document.getElementById("body").style.overflow = "visible";
+  } else {
+  }
+}
+mediaQueryList3.addListener(screenTest);
+
 // OVERFLOW FOR BODY WHEN MENU CLICKED
 
 // SELECT2 START
@@ -289,3 +305,165 @@ $(document).ready(function () {
 // SELECT2 END
 
 // FIRST PAGE END ************************************************************************
+
+// CLOSING ELEMENTS ON CLICK OUTSIDE
+// MENU LOGIN
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__menu").contains(e.target) &&
+    e.target !== document.querySelector(".col__3--link.btn") &&
+    e.target !== document.querySelector(".user__header") &&
+    e.target !== document.querySelector(".ucet__span")
+  ) {
+    document.querySelector(".dropdown__menu").classList.remove("active");
+  }
+});
+
+// CZK FLAG DROPDOWN
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__eur").contains(e.target) &&
+    e.target !== document.querySelector(".czk") &&
+    e.target !== document.querySelector(".arrow__czk") &&
+    e.target !== document.querySelector(".czk__span")
+  ) {
+    document.querySelector(".dropdown__eur").classList.remove("active");
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__eng").contains(e.target) &&
+    e.target !== document.querySelector(".col__3--link.flag") &&
+    e.target !== document.querySelector(".arrow__flag") &&
+    e.target !== document.querySelector(".flag__header")
+  ) {
+    document.querySelector(".dropdown__eng").classList.remove("active");
+  }
+});
+
+//
+
+// LOGIN MOBILE MENU
+
+document.addEventListener("click", (e) => {
+  if (
+    !document
+      .querySelector(".dropdown__menu--mobile--565")
+      .contains(e.target) &&
+    e.target !== document.querySelector(".btn--mobile--565") &&
+    e.target !== document.querySelector(".btn--mobile--565--span") &&
+    e.target !== document.querySelector(".user__header--565")
+  ) {
+    document
+      .querySelector(".dropdown__menu--mobile--565")
+      .classList.remove("active");
+
+    document.querySelector(".overlay").classList.remove("active");
+  }
+});
+
+if (!document.querySelector(".col__3--link.menu.active")) {
+  document.getElementById("body").style.overflow = "visible";
+}
+
+// LOGIN MOBILE MENU CZK EUR
+
+//EUR
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__eur--mobile--565").contains(e.target) &&
+    e.target !== document.querySelector(".arrow__down--czk--mobile--565") &&
+    e.target !== document.querySelector(".czk--mobile--565--span") &&
+    e.target !== document.querySelector(".czk--mobile--565")
+  ) {
+    document
+      .querySelector(".dropdown__eur--mobile--565")
+      .classList.remove("active");
+  }
+});
+//CZK
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__eng--mobile--565").contains(e.target) &&
+    e.target !== document.querySelector(".arrow__down--eng--mobile--565") &&
+    e.target !== document.querySelector(".flag__mobile--565--img")
+  ) {
+    document
+      .querySelector(".dropdown__eng--mobile--565")
+      .classList.remove("active");
+  }
+});
+
+// LOGIN TABLET VIEW
+// MENU
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__menu--mobile").contains(e.target) &&
+    e.target !== document.querySelector(".btn--mobile") &&
+    e.target !== document.querySelector(".user__header--mobile") &&
+    e.target !== document.querySelector(".user__header--mobile--span")
+  ) {
+    document
+      .querySelector(".dropdown__menu--mobile")
+      .classList.remove("active");
+
+    document
+      .querySelector(".col__3--link.btn--mobile")
+      .classList.remove("active");
+    document.querySelector(".col__3--links--mobile").classList.remove("active");
+  }
+});
+
+// CZK
+
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__eur--mobile").contains(e.target) &&
+    e.target !== document.querySelector(".czk--mobile") &&
+    e.target !== document.querySelector(".czk__mobile--span") &&
+    e.target !== document.querySelector(".arrow__down--czk--mobile")
+  ) {
+    document.querySelector(".dropdown__eur--mobile").classList.remove("active");
+  }
+});
+
+// FLAG
+
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".dropdown__eng--mobile").contains(e.target) &&
+    e.target !== document.querySelector(".flag--mobile") &&
+    e.target !== document.querySelector(".flag--mobile--select") &&
+    e.target !== document.querySelector(".arrow__down--flag--mobile")
+  ) {
+    document.querySelector(".dropdown__eng--mobile").classList.remove("active");
+  }
+});
+
+// REMOVING BODY OVERFLOW HIDDEN WHEN CLICKING ON A LINK IN MOBILE MENU
+
+//CENIK
+document.querySelector(".cenik__a").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+//FAQ
+document.querySelector(".faq__a-2").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+//BLOG
+document.querySelector(".blog__a").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+//KONTAKT
+document.querySelector(".kontakt__a").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
