@@ -39,13 +39,13 @@
 // ANIMATION END
 
 header {
-  position: relative;
-  // height: 80% !important;
   @include navbar;
+  height: 100%;
 }
 
 .header__bg {
   background-color: $darkBlue;
+  min-height: 69rem !important;
 }
 
 .form.form__ws {
