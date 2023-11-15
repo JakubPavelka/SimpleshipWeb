@@ -92,19 +92,21 @@
         }
 
         @media (max-width: 500px) {
-          max-width: 28rem;
+          max-width: 26rem;
           margin-right: 2rem;
-          left: -1rem;
+          left: -2.5rem;
         }
         @media (max-width: 420px) {
-          max-width: 24rem;
           margin-right: 1rem;
           left: -1.5rem;
         }
+        @media (max-width: 390px) {
+          max-width: 26rem;
+        }
         @media (max-width: 350px) {
-          max-width: 22rem;
+          max-width: 22.2rem;
           margin-right: 1rem;
-          left: -0.5rem;
+          left: -1.3rem;
         }
 
         .line {
@@ -142,6 +144,7 @@
             a {
               color: #3457ea;
               text-decoration: underline;
+              z-index: 5;
             }
           }
         }
@@ -164,6 +167,10 @@
         }
         h2 {
           @include p__h2;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
         }
       }
     }

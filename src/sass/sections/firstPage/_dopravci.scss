@@ -1,9 +1,13 @@
 .transport {
   margin-bottom: 10rem;
-  margin-top: 40rem;
-
+  margin-top: 9rem;
   @media (max-width: 850px) {
     margin-bottom: 6rem;
+    margin-top: 6rem;
+  }
+  @media (max-width: 450px) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
   }
   .transport__flex {
     display: grid;

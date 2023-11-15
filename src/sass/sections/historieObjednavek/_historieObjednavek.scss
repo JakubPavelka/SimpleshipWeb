@@ -531,6 +531,24 @@
   display: grid;
 }
 
+#main-historieA {
+  .rekapitulace__grid--objednavky {
+    .platba__bg--flex {
+      h4 {
+        @media (max-width: 500px) {
+          font-size: 1.35rem !important;
+        }
+      }
+
+      p {
+        @media (max-width: 500px) {
+          font-size: 1.2rem !important;
+        }
+      }
+    }
+  }
+}
+
 // OBJEDNAVKY B FORM
 
 #historie__objednavek--b {

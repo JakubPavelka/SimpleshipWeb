@@ -17,24 +17,9 @@
 }
 
 #palety {
-  margin-bottom: 60rem;
+  position: relative;
   .col3.slider {
     position: relative;
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 3px;
-      position: absolute;
-      background-color: #375cf6;
-      bottom: -1.8rem;
-      left: 0rem;
-      border-radius: 1rem;
-      z-index: 1;
-    }
-  }
-
-  .col1.slider {
     &::after {
       content: none !important;
       width: 100%;
@@ -44,7 +29,22 @@
       bottom: -1.8rem;
       left: 0rem;
       border-radius: 1rem;
-      z-index: 1;
+      z-index: 10;
+    }
+  }
+
+  .col1.slider {
+    &::after {
+      position: relative;
+      content: none !important;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      background-color: #375cf6;
+      bottom: -1.8rem;
+      left: 0rem;
+      border-radius: 1rem;
+      z-index: 10;
     }
   }
 }

@@ -1,4 +1,8 @@
 @mixin footer {
+  .footer-mt {
+    margin-top: 6.2rem;
+  }
+
   .footer,
   .footer--paleta {
     background-color: $darkBlue;
@@ -253,7 +257,8 @@
       }
 
       @media (max-width: 475px) {
-        row-gap: 0rem;
+        row-gap: 1rem;
+        margin-bottom: 3.5rem;
       }
       a {
         @include footer__a;

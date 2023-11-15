@@ -1,6 +1,3 @@
-#platba {
-}
-
 .platba {
   margin-top: 6rem;
   &__flex {
@@ -91,6 +88,12 @@
             @include input;
             padding-left: 2rem !important;
             width: 100%;
+          }
+
+          input[type="number"]::-webkit-outer-spin-button,
+          input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
           }
 
           select {
@@ -219,6 +222,17 @@
           }
         }
       }
+
+      // ACTIVE PLATEBNI METODY BG
+      .platebniMetody__bg.active {
+        border: 1px dashed $purple;
+        background-color: #f5f5ff;
+
+        h4 {
+          color: $purple;
+        }
+      }
+      //
 
       // REKAPITULACE
 
