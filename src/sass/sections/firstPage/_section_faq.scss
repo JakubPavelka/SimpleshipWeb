@@ -97,17 +97,11 @@
         }
       }
 
-      .hidden__text--1,
-      .hidden__text--2,
-      .hidden__text--3,
-      .hidden__text--4 {
+      .hidden__text {
         @include faq__text;
       }
 
-      .hidden__text--1.active,
-      .hidden__text--2.active,
-      .hidden__text--3.active,
-      .hidden__text--4.active {
+      .hidden__text.active {
         display: block;
       }
     }
@@ -178,17 +172,11 @@
         }
       }
 
-      .hidden__text--5,
-      .hidden__text--6,
-      .hidden__text--7,
-      .hidden__text--8 {
+      .hidden__text {
         @include faq__text;
       }
 
-      .hidden__text--5.active,
-      .hidden__text--6.active,
-      .hidden__text--7.active,
-      .hidden__text--8.active {
+      .hidden__text.active {
         display: block;
       }
     }

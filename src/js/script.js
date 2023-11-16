@@ -678,4 +678,44 @@ accordionButtonsThird.forEach(function (button) {
     }
   });
 });
+
+let accordionButtonsFifth = document.querySelectorAll(".accordion-btn-0");
+
+accordionButtonsFifth.forEach(function (button) {
+  button.addEventListener("click", function () {
+    accordionButtonsFifth.forEach(function (otherButton) {
+      if (otherButton !== button) {
+        otherButton.classList.remove("active");
+        let otherIcon = otherButton.querySelector("img");
+        if (otherIcon) {
+          otherIcon.src = "./src/img/plusIcon.svg";
+        }
+
+        // Close other open accordions
+        let otherContent = otherButton.parentNode.nextElementSibling; // Select the next 'hidden__text' element
+        if (otherContent) {
+          otherContent.classList.remove("active"); // Remove the 'active' class
+        }
+      }
+    });
+
+    this.classList.toggle("active");
+
+    let icon = this.querySelector("img");
+    if (icon) {
+      if (this.classList.contains("active")) {
+        icon.src = "./src/img/minusIcon.svg";
+      } else {
+        icon.src = "./src/img/plusIcon.svg";
+      }
+    }
+
+    // Open or close this accordion
+    let content = this.parentNode.nextElementSibling; // Select the next 'hidden__text' element
+    if (content) {
+      content.classList.toggle("active"); // Toggle the 'active' class
+    }
+  });
+});
+
 //
