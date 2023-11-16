@@ -1,5 +1,25 @@
 // HEADER START *********************************************************************
 
+// SYMBOL
+.header-symbol {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 10rem;
+
+  @media (max-width: 700px) {
+    width: 70%;
+  }
+
+  @media (max-width: 580px) {
+    top: 14rem;
+  }
+
+  @media (max-width: 430px) {
+    top: 16rem;
+  }
+}
+
 // ANIMATION START
 
 @keyframes fade-in {
@@ -43,6 +63,7 @@
 }
 
 header {
+  position: relative;
   @include navbar;
   height: 63rem;
   margin-bottom: -46rem;

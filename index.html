@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css?v=1.0.0" />
     <link rel="stylesheet" href="./src/vendors/select2/css/select2.min.css" />
 
     <!-- FONTAWESOME -->
@@ -19,6 +19,11 @@
   </head>
   <body id="body">
     <header>
+      <img
+        class="header-symbol"
+        src="./src/img/symbol_hero.png"
+        alt="hero symbol"
+      />
       <div class="header__bg">
         <!-- NAVBAR START ********************************************************* -->
         <div class="container">
@@ -53,7 +58,9 @@
                   </a>
                 </li>
                 <li><a class="col__2--link dot cenik" href="#">Ceník</a></li>
-                <li><a class="col__2--link dot faq" href="#faq">FAQ</a></li>
+                <li>
+                  <a class="col__2--link dot faq" href="index.html#faq">FAQ</a>
+                </li>
                 <li>
                   <a class="col__2--link dot blog" href="./blog.html">Blog</a>
                 </li>
@@ -256,7 +263,7 @@
         <!-- MOBILE MENU START ****************************************** -->
 
         <div class="mobile__menu">
-          <div class="mobile__flex">
+          <!-- <div class="mobile__flex">
             <div class="mobile__menu--col--1">
               <h3>Kam zasíláme</h3>
               <a href="#">Česká republika</a>
@@ -293,7 +300,17 @@
               <a href="#">GLS</a>
               <a href="#">UPS</a>
             </div>
+          </div> -->
+
+          <!-- NEW TABLET MENU START -->
+          <div class="temporary__tablet--menu">
+            <a href="#" class="sluzby__a cenik__a-tablet">Ceník</a>
+            <a href="index.html#faq" class="sluzby__a faq__a-tablet">FAQ</a>
+            <a href="./blog.html" class="sluzby__a blog__a-tablet">Blog</a>
+            <a href="#footer" class="sluzby__a kontakt__a-tablet">Kontakt</a>
           </div>
+
+          <!-- NEW TABLET MENU END -->
 
           <!-- MOBILE MENU CZK FLAG LOGIN START ************************* -->
           <div class="header__flex--mobile">
@@ -378,6 +395,8 @@
 
                 <!-- MENU DROPDOWN START ****************************** -->
 
+                <div id="overlay" class="overlay2"></div>
+
                 <div class="dropdown__menu--mobile">
                   <h3>Přihlášení</h3>
                   <div class="inputfield">
@@ -386,6 +405,7 @@
                       type="email"
                       name="email"
                       placeholder="E-mail"
+                      id="mail-tablet"
                     />
                     <div class="input__mail--icon">
                       <img src="./src/img/mail.svg" alt="mail icon" />
@@ -395,6 +415,7 @@
                       type="password"
                       name="password"
                       placeholder="Heslo"
+                      id="heslo-tablet"
                     />
                     <div class="input__password--icon">
                       <img src="./src/img/password.svg" alt="password icon" />
@@ -435,12 +456,12 @@
           <!-- MOBILE MENU 565PX START ********************************** -->
 
           <div class="mobile__menu--565">
-            <div class="mobile__menu--sluzby--565">
+            <!-- <div class="mobile__menu--sluzby--565">
               <h2 class="sluzby__h3">Služby</h2>
               <img src="./src/img/arrow_up_wh.svg" alt="arrow up" />
-            </div>
+            </div> -->
             <!-- KAM ZASILAME START ************************************ -->
-            <div class="mobile__menu--kamzasilame--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--kamzasilame--hidden mobile__menu--opener">
               <div class="flex-mob flex__kamzasilame">
                 <h3 class="kamz">Kam zasíláme</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -451,10 +472,10 @@
                 <a href="#">Balík do zahraničí</a>
                 <a href="#">Import ze zahraničí</a>
               </div>
-            </div>
+            </div> -->
             <!-- KAM ZASILAME END ************************************ -->
             <!-- CO ZASILAME START ************************************ -->
-            <div class="mobile__menu--cozasilame--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--cozasilame--hidden mobile__menu--opener">
               <div class="flex-mob flex__cozasilame">
                 <h3>Co zasíláme</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -468,10 +489,10 @@
                 <a href="#">Nábytek</a>
                 <a href="#">Obrazy a umělecká díla</a>
               </div>
-            </div>
+            </div> -->
             <!-- CO ZASILAME END ************************************ -->
             <!-- PŘEPRAVA START ************************************ -->
-            <div class="mobile__menu--preprava--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--preprava--hidden mobile__menu--opener">
               <div class="flex-mob flex__preprava">
                 <h3>Přeprava</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -485,10 +506,10 @@
                 <a href="#">Pojištění</a>
                 <a href="#">Vrácení zboží</a>
               </div>
-            </div>
+            </div> -->
             <!-- PŘEPRAVA END ************************************ -->
             <!-- DOPRAVCI START ************************************ -->
-            <div class="mobile__menu--dopravci--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--dopravci--hidden mobile__menu--opener">
               <div class="flex-mob flex__dopravci">
                 <h3>Doprava</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -501,13 +522,13 @@
                 <a href="#">GLS</a>
                 <a href="#">UPS</a>
               </div>
-            </div>
+            </div> -->
             <!-- DOPRAVCI END ************************************ -->
 
             <!-- CENIK FAQ BLOG KONTAKT START ******* -->
 
             <a href="#" class="sluzby__a cenik__a">Ceník</a>
-            <a href="#faq" class="sluzby__a faq__a faq__a-2">FAQ</a>
+            <a href="index.html#faq" class="sluzby__a faq__a faq__a-2">FAQ</a>
             <a href="./blog.html" class="sluzby__a blog__a">Blog</a>
             <a href="#footer" class="sluzby__a faq__a kontakt__a">Kontakt</a>
 
@@ -655,222 +676,222 @@
       </div>
     </header>
 
-    <!-- FORM START ******************************************************************** -->
-    <section class="form">
-      <div class="container">
-        <div class="col__left">
-          <!-- ROW 1 START ********************************************  -->
-
-          <div class="row__1">
-            <a href="index.html" class="col1 slider active">
-              <img src="./src/img/box.svg" alt="box logo" />
-              <p>Běžný balík</p>
-            </a>
-            <a href="dopis.html" class="col2 slider">
-              <img src="./src/img/dopis.svg" alt="letter logo" />
-              <p>Dopis</p>
-            </a>
-            <a href="./paleta.html" class="col3 slider">
-              <img src="./src/img/paleta.svg" alt="palette logo" />
-              <p>Paleta</p>
-            </a>
-            <a href="./kontejner.html" class="col4 slider">
-              <img src="./src/img/container.svg" alt="container logo" />
-              <p>Kontejner</p>
-            </a>
-            <a href="./kamionDodavka.html" class="col5 slider">
-              <img src="./src/img/truck.svg" alt="truck logo" />
-              <p>Kamion/dodávka</p>
-            </a>
-            <a href="nestandardni.html" class="col6 slider">
-              <img src="./src/img/horse.svg" alt="horse logo" />
-              <p>Nestandardní</p>
-            </a>
-          </div>
-
-          <!-- ROW 1 END ********************************************  -->
-          <!-- FORMULAR START ******************************************** -->
-          <section class="form__main">
-            <div class="flex__form">
-              <a class="reverse" href="#"
-                ><img src="./src/img/reverse.svg" alt="reverse icon"
-              /></a>
-              <div class="form__main--col--1">
-                <h3>Odkud</h3>
-                <div class="form__main--input--left">
-                  <select class="selectFirst" name="country1">
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                  </select>
-                  <div class="city__postal--flex">
-                    <input class="city" type="text" placeholder="Město" />
-                    <img
-                      class="city__img"
-                      src="./src/img/city.svg"
-                      alt="city icon"
-                    />
-                    <input class="postal" type="text" placeholder="PSČ" />
-                    <img
-                      class="postal__img"
-                      src="./src/img/postal.svg"
-                      alt="postal icon"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="form__main--col--reverse">
-                <a class="reverse__2" href="#">
-                  <img src="./src/img/reverse.svg" alt="reverse icon" />
-                </a>
-              </div>
-
-              <div class="form__main--col--2">
-                <h3>Kam</h3>
-                <div class="form__main--input--right">
-                  <select class="selectSecond" name="country2">
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Česká republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Slovenská republika</option>
-                    <option value="0">Slovenská republika</option>
-                  </select>
-                  <div class="city__postal--flex">
-                    <input class="city" type="text" placeholder="Město" />
-                    <img
-                      class="city__img"
-                      src="./src/img/city.svg"
-                      alt="city icon"
-                    />
-                    <input class="postal" type="text" placeholder="PSČ" />
-                    <img
-                      class="postal__img"
-                      src="./src/img/postal.svg"
-                      alt="postal icon"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- PACKAGE SECTION START ******************************************** -->
-            <section class="package">
-              <h3>Zásilka</h3>
-
-              <div class="package__grid">
-                <div class="package__grid--item">
-                  <input
-                    class="hmotnost"
-                    type="number"
-                    placeholder="Hmotnost"
-                  />
-                  <p class="kg">kg</p>
-                </div>
-
-                <div class="package__grid--item second">
-                  <input class="delka" type="number" placeholder="Délka" />
-                  <p class="x">x</p>
-                  <input class="sirka" type="number" placeholder="Šířka" />
-                  <p class="x">x</p>
-                  <input class="vyska" type="number" placeholder="Výška" />
-                  <p class="x">cm</p>
-                </div>
-
-                <div class="package__grid--item-copynew">
-                  <a href="#" class="package__grid--item--col-1">
-                    <img
-                      class="copy"
-                      src="./src/img/copy.svg"
-                      alt="copy icon"
-                    />
-                    <p>kopírovat</p>
-                  </a>
-                  <a href="#" class="package__grid--item--col-2">
-                    <img
-                      class="new"
-                      src="./src/img/new.svg"
-                      alt="new package icon"
-                    />
-                    <p>nová zásilka</p>
-                  </a>
-                </div>
-              </div>
-
-              <a class="price__count--btn" href="/vyberDopravce.html">
-                Spočítat cenu
-                <img src="./src/img/arrow_right.svg" alt="arrow right" />
-              </a>
-
-              <!-- PRICE COUNT BUTTON END ********************************************** -->
-            </section>
-          </section>
-        </div>
-      </div>
-      <!-- RIGHT COL 910PX VIEWPORT START -->
-      <section class="right__col--910">
-        <div class="col__container--910">
-          <div class="img__container--910">
-            <img
-              src="./src/img/Post_service_tracking_2_.png"
-              alt="vector image with man and packages"
-            />
-          </div>
-          <h3>Posíláte více než</h3>
-          <span>10 balíků měsíčně ?</span>
-          <p>Neváhejte nás kontaktovat pro individuální slevu.</p>
-          <a class="slider__btn" href="#">Kontaktujte nás</a>
-        </div>
-        <div class="arrows">
-          <a class="arrow__left" href="#">
-            <i class="fa-solid fa-chevron-left"></i>
-          </a>
-          <a class="arrow__right" href="#">
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        </div>
-      </section>
-      <!-- RIGHT COL 910PX VIEWPORT END -->
-      <!-- SLIDER SECTION START ******************************************** -->
-      <div class="col__right">
-        <div class="col__container">
-          <div class="img__container">
-            <img
-              src="./src/img/Post_service_tracking_2_.png"
-              alt="vector image with man and packages"
-            />
-          </div>
-          <h3>Posíláte více než</h3>
-          <span>10 balíků měsíčně ?</span>
-          <p>Neváhejte nás kontaktovat pro individuální slevu.</p>
-          <a class="slider__btn" href="#">Kontaktujte nás</a>
-        </div>
-        <div class="arrows">
-          <a class="arrow__left" href="#">
-            <i class="fa-solid fa-chevron-left"></i>
-          </a>
-          <a class="arrow__right" href="#">
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- FORM END -->
 
     <main>
+      <!-- FORM START ******************************************************************** -->
+      <section class="form">
+        <div class="container">
+          <div class="col__left">
+            <!-- ROW 1 START ********************************************  -->
+
+            <div class="row__1">
+              <a href="index.html" class="col1 slider active">
+                <img src="./src/img/box.svg" alt="box logo" />
+                <p>Běžný balík</p>
+              </a>
+              <a href="dopis.html" class="col2 slider">
+                <img src="./src/img/dopis.svg" alt="letter logo" />
+                <p>Dopis</p>
+              </a>
+              <a href="./paleta.html" class="col3 slider">
+                <img src="./src/img/paleta.svg" alt="palette logo" />
+                <p>Paleta</p>
+              </a>
+              <a href="./kontejner.html" class="col4 slider">
+                <img src="./src/img/container.svg" alt="container logo" />
+                <p>Kontejner</p>
+              </a>
+              <a href="./kamionDodavka.html" class="col5 slider">
+                <img src="./src/img/truck.svg" alt="truck logo" />
+                <p>Kamion/dodávka</p>
+              </a>
+              <a href="nestandardni.html" class="col6 slider">
+                <img src="./src/img/horse.svg" alt="horse logo" />
+                <p>Nestandardní</p>
+              </a>
+            </div>
+
+            <!-- ROW 1 END ********************************************  -->
+            <!-- FORMULAR START ******************************************** -->
+            <section class="form__main">
+              <div class="flex__form">
+                <a class="reverse" href="#"
+                  ><img src="./src/img/reverse.svg" alt="reverse icon"
+                /></a>
+                <div class="form__main--col--1">
+                  <h3>Odkud</h3>
+                  <div class="form__main--input--left">
+                    <select class="selectFirst" name="country1">
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                    </select>
+                    <div class="city__postal--flex">
+                      <input class="city" type="text" placeholder="Město" />
+                      <img
+                        class="city__img"
+                        src="./src/img/city.svg"
+                        alt="city icon"
+                      />
+                      <input class="postal" type="text" placeholder="PSČ" />
+                      <img
+                        class="postal__img"
+                        src="./src/img/postal.svg"
+                        alt="postal icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__main--col--reverse">
+                  <a class="reverse__2" href="#">
+                    <img src="./src/img/reverse.svg" alt="reverse icon" />
+                  </a>
+                </div>
+
+                <div class="form__main--col--2">
+                  <h3>Kam</h3>
+                  <div class="form__main--input--right">
+                    <select class="selectSecond" name="country2">
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Česká republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Slovenská republika</option>
+                      <option value="0">Slovenská republika</option>
+                    </select>
+                    <div class="city__postal--flex">
+                      <input class="city" type="text" placeholder="Město" />
+                      <img
+                        class="city__img"
+                        src="./src/img/city.svg"
+                        alt="city icon"
+                      />
+                      <input class="postal" type="text" placeholder="PSČ" />
+                      <img
+                        class="postal__img"
+                        src="./src/img/postal.svg"
+                        alt="postal icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- PACKAGE SECTION START ******************************************** -->
+              <section class="package">
+                <h3>Zásilka</h3>
+
+                <div class="package__grid">
+                  <div class="package__grid--item">
+                    <input
+                      class="hmotnost"
+                      type="number"
+                      placeholder="Hmotnost"
+                    />
+                    <p class="kg">kg</p>
+                  </div>
+
+                  <div class="package__grid--item second">
+                    <input class="delka" type="number" placeholder="Délka" />
+                    <p class="x">x</p>
+                    <input class="sirka" type="number" placeholder="Šířka" />
+                    <p class="x">x</p>
+                    <input class="vyska" type="number" placeholder="Výška" />
+                    <p class="x">cm</p>
+                  </div>
+
+                  <div class="package__grid--item-copynew">
+                    <a href="#" class="package__grid--item--col-1">
+                      <img
+                        class="copy"
+                        src="./src/img/copy.svg"
+                        alt="copy icon"
+                      />
+                      <p>kopírovat</p>
+                    </a>
+                    <a href="#" class="package__grid--item--col-2">
+                      <img
+                        class="new"
+                        src="./src/img/new.svg"
+                        alt="new package icon"
+                      />
+                      <p>nová zásilka</p>
+                    </a>
+                  </div>
+                </div>
+
+                <a class="price__count--btn" href="vyberDopravce.html">
+                  Spočítat cenu
+                  <img src="./src/img/arrow_right.svg" alt="arrow right" />
+                </a>
+
+                <!-- PRICE COUNT BUTTON END ********************************************** -->
+              </section>
+            </section>
+          </div>
+        </div>
+        <!-- RIGHT COL 910PX VIEWPORT START -->
+        <section class="right__col--910">
+          <div class="col__container--910">
+            <div class="img__container--910">
+              <img
+                src="./src/img/Post_service_tracking_2_.png"
+                alt="vector image with man and packages"
+              />
+            </div>
+            <h3>Posíláte více než</h3>
+            <span>10 balíků měsíčně ?</span>
+            <p>Neváhejte nás kontaktovat pro individuální slevu.</p>
+            <a class="slider__btn" href="#">Kontaktujte nás</a>
+          </div>
+          <div class="arrows">
+            <a class="arrow__left" href="#">
+              <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <a class="arrow__right" href="#">
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </section>
+        <!-- RIGHT COL 910PX VIEWPORT END -->
+        <!-- SLIDER SECTION START ******************************************** -->
+        <div class="col__right">
+          <div class="col__container">
+            <div class="img__container">
+              <img
+                src="./src/img/Post_service_tracking_2_.png"
+                alt="vector image with man and packages"
+              />
+            </div>
+            <h3>Posíláte více než</h3>
+            <span>10 balíků měsíčně ?</span>
+            <p>Neváhejte nás kontaktovat pro individuální slevu.</p>
+            <a class="slider__btn" href="#">Kontaktujte nás</a>
+          </div>
+          <div class="arrows">
+            <a class="arrow__left" href="#">
+              <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <a class="arrow__right" href="#">
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!-- SECTION DOPRAVCI START ****************************** -->
       <section class="transport">
         <div class="container">
@@ -970,8 +991,13 @@
               <div class="col__1--row--1">
                 <div class="fl">
                   <h4>Musím zásilku někam nosit?</h4>
-
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--1">
                   Nemusíte. Vše vyzvedneme přímo u vás a doručíme ke dveřím
@@ -981,8 +1007,13 @@
               <div class="col__1--row--2">
                 <div class="fl">
                   <h4>Jak můžu zaplatit za objednávku?</h4>
-
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -992,8 +1023,13 @@
               <div class="col__1--row--3">
                 <div class="fl">
                   <h4>Mohu poslat balík na dobírku?</h4>
-
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--3">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1003,7 +1039,13 @@
               <div class="col__1--row--4">
                 <div class="fl">
                   <h4>Mohu poslat balík na dobírku?</h4>
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1015,7 +1057,13 @@
               <div class="col__2--row--1">
                 <div class="fl">
                   <h4>Jak rychle zásilka dojde?</h4>
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--5">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1025,7 +1073,13 @@
               <div class="col__2--row--2">
                 <div class="fl">
                   <h4>S kým budu komunikovat?</h4>
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--6">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -1035,7 +1089,13 @@
               <div class="col__2--row--3">
                 <div class="fl">
                   <h4>Jak probíhá reklamace?</h4>
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--7">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -1045,7 +1105,13 @@
               <div class="col__2--row--4">
                 <div class="fl">
                   <h4>Mohu objednat přepravu na fakturu?</h4>
-                  <img class="plus" src="./src/img/plusIcon.svg" alt="plus icon" />
+                  <div class="accordion-btn">
+                    <img
+                      class="plus"
+                      src="./src/img/plusIcon.svg"
+                      alt="plus icon"
+                    />
+                  </div>
                 </div>
                 <p class="hidden__text--8">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -1173,6 +1239,11 @@
           </div>
         </div>
       </section>
+      <img
+        class="footer-symbol"
+        src="./src/img/symbol_footer.png"
+        alt="footer symbol"
+      />
     </footer>
 
     <script src="./src/vendors/jquery/dist/jquery.min.js"></script>

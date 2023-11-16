@@ -20,8 +20,13 @@
 
   <body id="body">
     <header id="kontejner">
-      <!-- NAVBAR START ********************************************************* -->
+      <img
+        class="header-symbol"
+        src="./src/img/symbol_hero.png"
+        alt="hero symbol"
+      />
       <div class="header__bg">
+        <!-- NAVBAR START ********************************************************* -->
         <div class="container">
           <div class="header__flex">
             <!-- COL 1 START ********************************************************* -->
@@ -259,7 +264,7 @@
         <!-- MOBILE MENU START ****************************************** -->
 
         <div class="mobile__menu">
-          <div class="mobile__flex">
+          <!-- <div class="mobile__flex">
             <div class="mobile__menu--col--1">
               <h3>Kam zasíláme</h3>
               <a href="#">Česká republika</a>
@@ -296,7 +301,17 @@
               <a href="#">GLS</a>
               <a href="#">UPS</a>
             </div>
+          </div> -->
+
+          <!-- NEW TABLET MENU START -->
+          <div class="temporary__tablet--menu">
+            <a href="#" class="sluzby__a cenik__a-tablet">Ceník</a>
+            <a href="index.html#faq" class="sluzby__a faq__a-tablet">FAQ</a>
+            <a href="./blog.html" class="sluzby__a blog__a-tablet">Blog</a>
+            <a href="#footer" class="sluzby__a kontakt__a-tablet">Kontakt</a>
           </div>
+
+          <!-- NEW TABLET MENU END -->
 
           <!-- MOBILE MENU CZK FLAG LOGIN START ************************* -->
           <div class="header__flex--mobile">
@@ -381,6 +396,8 @@
 
                 <!-- MENU DROPDOWN START ****************************** -->
 
+                <div id="overlay" class="overlay2"></div>
+
                 <div class="dropdown__menu--mobile">
                   <h3>Přihlášení</h3>
                   <div class="inputfield">
@@ -389,6 +406,7 @@
                       type="email"
                       name="email"
                       placeholder="E-mail"
+                      id="mail-tablet"
                     />
                     <div class="input__mail--icon">
                       <img src="./src/img/mail.svg" alt="mail icon" />
@@ -398,6 +416,7 @@
                       type="password"
                       name="password"
                       placeholder="Heslo"
+                      id="heslo-tablet"
                     />
                     <div class="input__password--icon">
                       <img src="./src/img/password.svg" alt="password icon" />
@@ -438,12 +457,12 @@
           <!-- MOBILE MENU 565PX START ********************************** -->
 
           <div class="mobile__menu--565">
-            <div class="mobile__menu--sluzby--565">
+            <!-- <div class="mobile__menu--sluzby--565">
               <h2 class="sluzby__h3">Služby</h2>
               <img src="./src/img/arrow_up_wh.svg" alt="arrow up" />
-            </div>
+            </div> -->
             <!-- KAM ZASILAME START ************************************ -->
-            <div class="mobile__menu--kamzasilame--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--kamzasilame--hidden mobile__menu--opener">
               <div class="flex-mob flex__kamzasilame">
                 <h3 class="kamz">Kam zasíláme</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -454,10 +473,10 @@
                 <a href="#">Balík do zahraničí</a>
                 <a href="#">Import ze zahraničí</a>
               </div>
-            </div>
+            </div> -->
             <!-- KAM ZASILAME END ************************************ -->
             <!-- CO ZASILAME START ************************************ -->
-            <div class="mobile__menu--cozasilame--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--cozasilame--hidden mobile__menu--opener">
               <div class="flex-mob flex__cozasilame">
                 <h3>Co zasíláme</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -471,13 +490,13 @@
                 <a href="#">Nábytek</a>
                 <a href="#">Obrazy a umělecká díla</a>
               </div>
-            </div>
+            </div> -->
             <!-- CO ZASILAME END ************************************ -->
             <!-- PŘEPRAVA START ************************************ -->
-            <div class="mobile__menu--preprava--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--preprava--hidden mobile__menu--opener">
               <div class="flex-mob flex__preprava">
                 <h3>Přeprava</h3>
-                <img src="./src/img/arrow_up_bl.svg" alt="right arrow" />
+                <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
               </div>
               <div class="a__container--3 a__container">
                 <a href="#">Jak poslat zásilku</a>
@@ -488,10 +507,10 @@
                 <a href="#">Pojištění</a>
                 <a href="#">Vrácení zboží</a>
               </div>
-            </div>
+            </div> -->
             <!-- PŘEPRAVA END ************************************ -->
             <!-- DOPRAVCI START ************************************ -->
-            <div class="mobile__menu--dopravci--hidden mobile__menu--opener">
+            <!-- <div class="mobile__menu--dopravci--hidden mobile__menu--opener">
               <div class="flex-mob flex__dopravci">
                 <h3>Doprava</h3>
                 <img src="./src/img/arrow_up_bl.svg" alt="arrow up" />
@@ -504,7 +523,7 @@
                 <a href="#">GLS</a>
                 <a href="#">UPS</a>
               </div>
-            </div>
+            </div> -->
             <!-- DOPRAVCI END ************************************ -->
 
             <!-- CENIK FAQ BLOG KONTAKT START ******* -->
@@ -1029,6 +1048,11 @@
           </div>
         </div>
       </section>
+      <img
+        class="footer-symbol"
+        src="./src/img/symbol_footer.png"
+        alt="footer symbol"
+      />
     </footer>
 
     <script src="./src/vendors/jquery/dist/jquery.min.js"></script>

@@ -1,3 +1,14 @@
 footer {
+  position: relative;
   @include footer;
+  .footer-symbol {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+
+    @media (max-width: 600px) {
+      width: 80%;
+    }
+  }
 }

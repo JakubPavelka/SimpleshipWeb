@@ -196,22 +196,22 @@ document.querySelector(".btn--mobile").addEventListener("click", () => {
 
 // SLUZBY SUBCLASSES OPENER START
 
-document
-  .querySelector(".mobile__menu--sluzby--565")
-  .addEventListener("click", () => {
-    document
-      .querySelector(".mobile__menu--kamzasilame--hidden")
-      .classList.toggle("active");
-    document
-      .querySelector(".mobile__menu--cozasilame--hidden")
-      .classList.toggle("active");
-    document
-      .querySelector(".mobile__menu--preprava--hidden")
-      .classList.toggle("active");
-    document
-      .querySelector(".mobile__menu--dopravci--hidden")
-      .classList.toggle("active");
-  });
+// document
+//   .querySelector(".mobile__menu--sluzby--565")
+//   .addEventListener("click", () => {
+//     document
+//       .querySelector(".mobile__menu--kamzasilame--hidden")
+//       .classList.toggle("active");
+//     document
+//       .querySelector(".mobile__menu--cozasilame--hidden")
+//       .classList.toggle("active");
+//     document
+//       .querySelector(".mobile__menu--preprava--hidden")
+//       .classList.toggle("active");
+//     document
+//       .querySelector(".mobile__menu--dopravci--hidden")
+//       .classList.toggle("active");
+//   });
 
 // SLUZBY SUBCLASSES OPENER END
 
@@ -271,6 +271,14 @@ document.querySelector(".btn--mobile--565").addEventListener("click", () => {
 });
 
 // MOBILE MENU 565 PX ACCOUNT POP UP END
+
+// TABLET MENU OVERLAY POP UP START
+
+document.querySelector(".btn--mobile").addEventListener("click", () => {
+  document.querySelector(".overlay2").classList.add("active");
+});
+
+// TABLET MENU OVERLAY POP UP END
 
 // OVERFLOW FOR BODY WHEN MENU CLICKED
 
@@ -412,6 +420,8 @@ document.addEventListener("click", (e) => {
       .querySelector(".col__3--link.btn--mobile")
       .classList.remove("active");
     document.querySelector(".col__3--links--mobile").classList.remove("active");
+
+    document.querySelector(".overlay2").classList.remove("active");
   }
 });
 
@@ -446,24 +456,226 @@ document.addEventListener("click", (e) => {
 //CENIK
 document.querySelector(".cenik__a").addEventListener("click", () => {
   document.getElementById("body").style.overflow = "visible";
+
   document.querySelector(".menu").classList.remove("active");
   document.querySelector(".mobile__menu").classList.remove("active");
 });
 //FAQ
 document.querySelector(".faq__a-2").addEventListener("click", () => {
   document.getElementById("body").style.overflow = "visible";
+
   document.querySelector(".menu").classList.remove("active");
   document.querySelector(".mobile__menu").classList.remove("active");
 });
 //BLOG
 document.querySelector(".blog__a").addEventListener("click", () => {
   document.getElementById("body").style.overflow = "visible";
+
   document.querySelector(".menu").classList.remove("active");
   document.querySelector(".mobile__menu").classList.remove("active");
 });
 //KONTAKT
 document.querySelector(".kontakt__a").addEventListener("click", () => {
   document.getElementById("body").style.overflow = "visible";
+
   document.querySelector(".menu").classList.remove("active");
   document.querySelector(".mobile__menu").classList.remove("active");
 });
+
+if (!document.querySelector(".menu.active")) {
+  document.getElementById("body").style.overflow = "visible";
+}
+
+// REMOVING BODY OVERFLOW HIDDEN WHEN CLICKING ON A LINK IN TABLET MENU
+
+//CENIK
+document.querySelector(".cenik__a-tablet").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+//FAQ
+document.querySelector(".faq__a-tablet").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+//BLOG
+document.querySelector(".blog__a-tablet").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+//KONTAKT
+document.querySelector(".kontakt__a-tablet").addEventListener("click", () => {
+  document.getElementById("body").style.overflow = "visible";
+
+  document.querySelector(".menu").classList.remove("active");
+  document.querySelector(".mobile__menu").classList.remove("active");
+});
+
+/// PLUS NA MINUS
+
+let accordionButtons = document.querySelectorAll(".accordion-btn");
+
+accordionButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    accordionButtons.forEach(function (otherButton) {
+      if (otherButton !== button) {
+        otherButton.classList.remove("active");
+        let otherIcon = otherButton.querySelector("img");
+        if (otherIcon) {
+          otherIcon.src = "./src/img/plusIcon.svg";
+        }
+
+        // Close other open accordions
+        let otherContent = otherButton.parentNode.parentNode.querySelectorAll(
+          ".platba__bg--flex:not(.mobile__view)"
+        );
+        if (otherContent) {
+          otherContent.forEach(function (content) {
+            if (!content.classList.contains("hide")) {
+              if (window.innerWidth <= 540) {
+                // Check the window width
+                content.style.display = "none";
+              }
+            }
+          });
+        }
+      }
+    });
+
+    this.classList.toggle("active");
+
+    let icon = this.querySelector("img");
+    if (icon) {
+      if (this.classList.contains("active")) {
+        icon.src = "./src/img/minusIcon.svg";
+      } else {
+        icon.src = "./src/img/plusIcon.svg";
+      }
+    }
+
+    // Open or close this accordion
+    let content = this.parentNode.parentNode.querySelectorAll(
+      ".platba__bg--flex:not(.mobile__view)"
+    );
+    if (content) {
+      content.forEach(function (content) {
+        if (!content.classList.contains("hide")) {
+          if (window.innerWidth <= 540) {
+            // Check the window width
+            content.style.display =
+              content.style.display === "flex" ? "none" : "flex";
+          }
+        }
+      });
+    }
+  });
+});
+
+let accordionButtonsNew = document.querySelectorAll(
+  ".tabulka__grid--item .accordion-btn-2"
+);
+
+accordionButtonsNew.forEach(function (button) {
+  button.addEventListener("click", function () {
+    accordionButtonsNew.forEach(function (otherButton) {
+      if (otherButton !== button) {
+        otherButton.classList.remove("active");
+        let otherIcon = otherButton.querySelector("img");
+        if (otherIcon) {
+          otherIcon.src = "./src/img/plusIcon.svg";
+        }
+
+        // Close other open accordions
+        let otherContent = otherButton.parentNode.nextElementSibling; // Select the next 'platba__bg' element
+        if (otherContent) {
+          otherContent.style.display = "none";
+        }
+      }
+    });
+
+    this.classList.toggle("active");
+
+    let icon = this.querySelector("img");
+    if (icon) {
+      if (this.classList.contains("active")) {
+        icon.src = "./src/img/minusIcon.svg";
+      } else {
+        icon.src = "./src/img/plusIcon.svg";
+      }
+    }
+
+    // Open or close this accordion
+    let content = this.parentNode.nextElementSibling; // Select the next 'platba__bg' element
+    if (content) {
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  });
+});
+
+let accordionButtonsThird = document.querySelectorAll(
+  ".obsah__clanku--mobile .accordion-btn-3"
+);
+
+accordionButtonsThird.forEach(function (button) {
+  button.addEventListener("click", function () {
+    accordionButtonsThird.forEach(function (otherButton) {
+      if (otherButton !== button) {
+        otherButton.classList.remove("active");
+        let otherIcon = otherButton.querySelector("img");
+        if (otherIcon) {
+          otherIcon.src = "./src/img/plusIcon.svg";
+        }
+
+        // Close other open accordions
+        let otherContent = otherButton.parentNode.nextElementSibling; // Select the next 'wrapper__hidden' element
+        if (otherContent) {
+          otherContent.style.display = "none";
+          let hiddenTitle = otherContent.querySelector(".hidden"); // Select the 'hidden' h4 element
+          if (hiddenTitle) {
+            hiddenTitle.style.display = "block";
+          }
+        }
+      }
+    });
+
+    this.classList.toggle("active");
+
+    let icon = this.querySelector("img");
+    if (icon) {
+      if (this.classList.contains("active")) {
+        icon.src = "./src/img/minusIcon.svg";
+      } else {
+        icon.src = "./src/img/plusIcon.svg";
+      }
+    }
+
+    // Open or close this accordion
+    let content = this.parentNode.nextElementSibling; // Select the next 'wrapper__hidden' element
+    if (content) {
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        let hiddenTitle = content.querySelector(".hidden"); // Select the 'hidden' h4 element
+        if (hiddenTitle) {
+          hiddenTitle.style.display = "none";
+        }
+      } else {
+        content.style.display = "none";
+        let hiddenTitle = content.querySelector(".hidden"); // Select the 'hidden' h4 element
+        if (hiddenTitle) {
+          hiddenTitle.style.display = "block";
+        }
+      }
+    }
+  });
+});
+//

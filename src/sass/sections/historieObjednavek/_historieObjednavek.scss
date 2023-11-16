@@ -303,7 +303,7 @@
                 @media (max-width: 680px) {
                   display: block;
                 }
-                @media (max-width: 340px) {
+                @media (max-width: 370px) {
                   font-size: 1rem;
                 }
               }
@@ -321,7 +321,7 @@
                   font-size: 1.2rem;
                 }
 
-                @media (max-width: 340px) {
+                @media (max-width: 370px) {
                   font-size: 1rem;
                 }
 
@@ -345,7 +345,7 @@
                 @media (max-width: 540px) {
                   font-size: 1.2rem;
                 }
-                @media (max-width: 340px) {
+                @media (max-width: 370px) {
                   font-size: 1rem;
                 }
               }
@@ -360,7 +360,7 @@
                 @media (max-width: 540px) {
                   font-size: 1.1rem;
                 }
-                @media (max-width: 340px) {
+                @media (max-width: 370px) {
                   font-size: 1rem;
                 }
               }
@@ -376,7 +376,7 @@
                   font-size: 1.1rem;
                 }
 
-                @media (max-width: 340px) {
+                @media (max-width: 370px) {
                   font-size: 1rem;
                 }
               }
@@ -547,6 +547,20 @@
       }
     }
   }
+
+  .rekapitulace__grid--objednavky {
+    .platba__bg {
+      margin-bottom: 2rem !important;
+    }
+  }
+
+  .accordion-btn-2 {
+    margin-left: 0.8rem;
+
+    @media (max-width: 450px) {
+      margin-left: 0rem;
+    }
+  }
 }
 
 // OBJEDNAVKY B FORM
@@ -559,6 +573,12 @@
       h5 {
         font-weight: 400;
       }
+    }
+  }
+
+  .rekapitulace__grid--objednavky {
+    .platba__bg {
+      margin-bottom: 2rem !important;
     }
   }
 }

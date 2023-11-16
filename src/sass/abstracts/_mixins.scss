@@ -185,12 +185,16 @@
     margin-bottom: 1rem;
   }
 
-  &--flex {
+  .platba__bg--flex {
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 540px) {
       display: none;
+    }
+
+    @media (min-width: 541px) {
+      display: flex;
     }
 
     h4 {
@@ -221,6 +225,7 @@
     @media (max-width: 540px) {
       display: flex;
       align-items: center;
+      margin: 1rem 0;
     }
 
     img {
@@ -231,4 +236,8 @@
       margin-bottom: 0;
     }
   }
+}
+
+.asfasfasfas {
+  margin: 1;
 }
